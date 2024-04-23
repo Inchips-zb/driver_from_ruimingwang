@@ -1,0 +1,492 @@
+Dependencies for Project 'DMA_916', Target 'Target 1': (DO NOT MODIFY !)
+CompilerVersion: 6160000::V6.16::ARMCLANG
+F (.\src\main.c)(0x63D909CF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/main.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x603507D0)
+I (src\profile.h)(0x63D8FF03)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+I (..\..\sdk\bundles\typical\inc\platform_api.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\ll_api.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\os\FreeRTOS.h)(0x6260C5CA)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x603507D0)
+I (..\..\sdk\bundles\typical\inc\os\FreeRTOSConfig.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\projdefs.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\portable.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\os\deprecated_definitions.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\portmacro.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\.\portable\GCC\ARM_CM3\portmacro.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\mpu_wrappers.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\os\task.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\os\list.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\os\timers.h)(0x63C7CB00)
+F (.\src\profile.c)(0x63D8FF03)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/profile.o -MD)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x603507D4)
+I (..\..\sdk\bundles\typical\inc\platform_api.h)(0x63C7CB00)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+I (..\..\sdk\bundles\typical\inc\ll_api.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\att_db.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\bluetooth.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\bt_types.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\btstack_linked_list.h)(0x6260C5CA)
+I (..\..\sdk\bundles\typical\inc\gap.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\btstack_event.h)(0x63C7CB00)
+I (..\..\sdk\src\StartUP\ing916\compiler.h)(0x63C7C53C)
+I (..\..\sdk\bundles\typical\inc\btstack_util.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\btstack_defines.h)(0x63C75280)
+I (src\..\data\gatt.const)(0x63D8FF03)
+I (src\..\data\advertising.adv)(0x63D8FF03)
+I (src\..\data\advertising.const)(0x63D8FF03)
+I (src\..\data\scan_response.adv)(0x63D8FF03)
+I (src\..\data\scan_response.const)(0x63D8FF03)
+I (src\..\data\gatt.profile)(0x63D8FF03)
+F (.\src\startup_ing91600.s)(0x63D8FF03)(--cpu Cortex-M4.fp.sp -g --pd "__MICROLIB SETA 1"-I.\RTE\_Target_1-IC:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include--pd "__UVISION_VERSION SETA 536"--pd "_RTE_ SETA 1"--pd "_RTE_ SETA 1"--list .\listing\startup_ing91600.lst--xref -o .\output\startup_ing91600.o--depend .\output\startup_ing91600.d)
+F (../../sdk\bundles\typical\ING9168xx\symdefs.m)(0x63D4CC21)()
+F (../../sdk\src\FWlib\peripheral_adc.c)(0x63AFB442)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_adc.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_gpio.c)(0x63C0EB34)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_gpio.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_i2c.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2c.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_pinctrl.c)(0x63B91DD0)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pinctrl.o -MD)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_pwm.c)(0x63C0D210)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pwm.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_rtc.c)(0x63ABE442)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_rtc.o -MD)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_ssp.c)(0x634CBB80)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ssp.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_sysctrl.c)(0x63C79FB2)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_sysctrl.o -MD)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_timer.c)(0x63ABE442)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_timer.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_uart.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_uart.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_dma.c)(0x63D908A7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_dma.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+I (..\..\sdk\bundles\typical\inc\platform_api.h)(0x63C7CB00)
+I (..\..\sdk\bundles\typical\inc\ll_api.h)(0x63C7CB00)
+F (../../sdk\src\FWlib\peripheral_efuse.c)(0x635F3378)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_efuse.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_i2s.c)(0x63BE5620)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_i2s.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_ir.c)(0x63805914)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_ir.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_pdm.c)(0x6260C5CC)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pdm.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)
+F (../../sdk\src\FWlib\peripheral_pte.c)(0x63A56770)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__MICROLIB -gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -I ../../sdk/bundles/typical/inc -I ../../sdk/bundles/typical/inc/os -I ../../sdk/src/BSP -I ../../sdk/src/FWlib -I ../../sdk/src/StartUP/ing916 -I ../../sdk/src/Tools -I ../../sdk/src-I./RTE/_Target_1-IC:/Users/lenovo/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include-D__UVISION_VERSION="536" -D_RTE_ -D_RTE_ -DUSE_STDPERIPH_DRIVER-o ./output/peripheral_pte.o -MD)
+I (..\..\sdk\src\FWlib\peripheral_pte.h)(0x63A56770)
+I (..\..\sdk\src\StartUP\ing916\ingsoc.h)(0x63C8DFFA)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\core_cm4.h)(0x60D3E8E2)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x603507D0)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_version.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_compiler.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\cmsis_armclang.h)(0x60D3E8E2)
+I (C:\Users\lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include\mpu_armv7.h)(0x60D3E8E2)
+I (..\..\sdk\src\StartUP\ing916\..\__ingsoc.h)(0x63C7C4BE)
+I (..\..\sdk\src\FWlib\peripheral_pinctrl.h)(0x63D4F4D5)
+I (..\..\sdk\src\FWlib\peripheral_sysctrl.h)(0x63C79E2C)
+I (..\..\sdk\src\FWlib\peripheral_uart.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ssp.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_gpio.h)(0x63B91CAC)
+I (..\..\sdk\src\FWlib\peripheral_timer.h)(0x63A550A0)
+I (..\..\sdk\src\FWlib\peripheral_pwm.h)(0x63BFCD1C)
+I (..\..\sdk\src\FWlib\peripheral_i2c.h)(0x634CBB80)
+I (..\..\sdk\src\FWlib\peripheral_i2s.h)(0x63BE18E0)
+I (..\..\sdk\src\FWlib\peripheral_pdm.h)(0x63A406D2)
+I (..\..\sdk\src\FWlib\peripheral_rtc.h)(0x63ABE442)
+I (..\..\sdk\src\FWlib\peripheral_adc.h)(0x63AFB442)
+I (..\..\sdk\src\FWlib\peripheral_efuse.h)(0x635F3378)
+I (..\..\sdk\src\FWlib\peripheral_dma.h)(0x6260C5CC)
+I (..\..\sdk\src\FWlib\peripheral_ir.h)(0x63805914)
+I (..\..\sdk\src\FWlib\peripheral_usb.h)(0x63AE4F10)

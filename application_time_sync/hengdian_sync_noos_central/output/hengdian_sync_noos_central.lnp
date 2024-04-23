@@ -1,0 +1,17 @@
+--cpu Cortex-M3
+".\output\main.o"
+".\output\profile.o"
+".\output\noos_impl.o"
+".\output\time_sync.o"
+".\output\startup_ing91800.o"
+"../../sdk\bundles\noos_extension\ING9187xx\symdefs.m"
+".\output\peripheral_uart.o"
+".\output\peripheral_pinctrl.o"
+".\output\peripheral_sysctrl.o"
+".\output\peripheral_timer.o"
+".\output\peripheral_gpio.o"
+".\output\ad_parser.o"
+--library_type=microlib --strict --scatter ".\output\hengdian_sync_noos_central.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listing\hengdian_sync_noos_central.map" -o .\output\hengdian_sync_noos_central.axf

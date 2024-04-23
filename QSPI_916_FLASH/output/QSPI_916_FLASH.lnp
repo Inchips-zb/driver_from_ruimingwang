@@ -1,0 +1,18 @@
+--cpu=Cortex-M4.fp.sp
+".\output\main.o"
+".\output\profile.o"
+".\output\qspi_flash.o"
+".\output\startup_ing91600.o"
+"../../sdk\bundles\typical\ING9168xx\symdefs.m"
+".\output\eflash.o"
+".\output\peripheral_gpio.o"
+".\output\peripheral_pinctrl.o"
+".\output\peripheral_sysctrl.o"
+".\output\peripheral_timer.o"
+".\output\peripheral_uart.o"
+".\output\peripheral_dma.o"
+".\output\peripheral_ssp.o"
+--library_type=microlib --strict --scatter ".\output\QSPI_916_FLASH.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listing\QSPI_916_FLASH.map" -o .\output\QSPI_916_FLASH.axf

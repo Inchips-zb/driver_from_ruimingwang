@@ -1,0 +1,1880 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.cb_putc) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for apUART_Check_TXFIFO_FULL
+    main.o(.text.cb_putc) refers to peripheral_uart.o(.text.UART_SendData) for UART_SendData
+    main.o(.ARM.exidx.text.cb_putc) refers to main.o(.text.cb_putc) for [Anonymous Symbol]
+    main.o(.text.fputc) refers to main.o(.text.cb_putc) for cb_putc
+    main.o(.ARM.exidx.text.fputc) refers to main.o(.text.fputc) for [Anonymous Symbol]
+    main.o(.text.config_uart) refers to peripheral_uart.o(.text.apUART_Initialize) for apUART_Initialize
+    main.o(.ARM.exidx.text.config_uart) refers to main.o(.text.config_uart) for [Anonymous Symbol]
+    main.o(.text.gpio_isr) refers to main.o(.text.key_detector_start_calc) for key_detector_start_calc
+    main.o(.text.gpio_isr) refers to peripheral_gpio.o(.text.GIO_ClearAllIntStatus) for GIO_ClearAllIntStatus
+    main.o(.ARM.exidx.text.gpio_isr) refers to main.o(.text.gpio_isr) for [Anonymous Symbol]
+    main.o(.text.key_detector_start_calc) refers to main.o(.bss.sem_wakeup) for sem_wakeup
+    main.o(.ARM.exidx.text.key_detector_start_calc) refers to main.o(.text.key_detector_start_calc) for [Anonymous Symbol]
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) for SYSCTRL_ClearClkGateMulti
+    main.o(.text.setup_peripherals) refers to main.o(.text.config_uart) for config_uart
+    main.o(.text.setup_peripherals) refers to uldiv.o(.text) for __aeabi_uldivmod
+    main.o(.text.setup_peripherals) refers to peripheral_timer.o(.text.TMR_WatchDogEnable3) for TMR_WatchDogEnable3
+    main.o(.text.setup_peripherals) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    main.o(.text.setup_peripherals) refers to peripheral_gpio.o(.text.GIO_SetDirection) for GIO_SetDirection
+    main.o(.text.setup_peripherals) refers to peripheral_gpio.o(.text.GIO_ConfigIntSource) for GIO_ConfigIntSource
+    main.o(.text.setup_peripherals) refers to main.o(.text.gpio_isr) for gpio_isr
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) for SYSCTRL_ResetBlock
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) for SYSCTRL_ReleaseBlock
+    main.o(.ARM.exidx.text.setup_peripherals) refers to main.o(.text.setup_peripherals) for [Anonymous Symbol]
+    main.o(.text.on_deep_sleep_wakeup) refers to main.o(.text.setup_peripherals) for setup_peripherals
+    main.o(.ARM.exidx.text.on_deep_sleep_wakeup) refers to main.o(.text.on_deep_sleep_wakeup) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.query_deep_sleep_allowed) refers to main.o(.text.query_deep_sleep_allowed) for [Anonymous Symbol]
+    main.o(.text.app_main) refers to main.o(.text.cb_hard_fault) for cb_hard_fault
+    main.o(.text.app_main) refers to main.o(.text.cb_assertion) for cb_assertion
+    main.o(.text.app_main) refers to main.o(.text.cb_heap_out_of_mem) for cb_heap_out_of_mem
+    main.o(.text.app_main) refers to main.o(.text.on_deep_sleep_wakeup) for on_deep_sleep_wakeup
+    main.o(.text.app_main) refers to main.o(.text.query_deep_sleep_allowed) for query_deep_sleep_allowed
+    main.o(.text.app_main) refers to main.o(.text.cb_putc) for cb_putc
+    main.o(.text.app_main) refers to main.o(.text.setup_peripherals) for setup_peripherals
+    main.o(.text.app_main) refers to main.o(.text.watchdog_task) for watchdog_task
+    main.o(.text.app_main) refers to main.o(.rodata.str1.1) for .L.str
+    main.o(.text.app_main) refers to main.o(.bss.trace_ctx) for trace_ctx
+    main.o(.text.app_main) refers to trace.o(.text.trace_rtt_init) for trace_rtt_init
+    main.o(.text.app_main) refers to trace.o(.text.cb_trace_rtt) for cb_trace_rtt
+    main.o(.text.app_main) refers to main.o(.bss.sem_wakeup) for sem_wakeup
+    main.o(.text.app_main) refers to main.o(.text.packet_schedule_task) for packet_schedule_task
+    main.o(.ARM.exidx.text.app_main) refers to main.o(.text.app_main) for [Anonymous Symbol]
+    main.o(.text.cb_hard_fault) refers to main.o(.rodata.str1.1) for .L.str.2
+    main.o(.ARM.exidx.text.cb_hard_fault) refers to main.o(.text.cb_hard_fault) for [Anonymous Symbol]
+    main.o(.text.cb_assertion) refers to main.o(.rodata.str1.1) for .L.str.3
+    main.o(.ARM.exidx.text.cb_assertion) refers to main.o(.text.cb_assertion) for [Anonymous Symbol]
+    main.o(.text.cb_heap_out_of_mem) refers to main.o(.rodata.str1.1) for .L.str.4
+    main.o(.ARM.exidx.text.cb_heap_out_of_mem) refers to main.o(.text.cb_heap_out_of_mem) for [Anonymous Symbol]
+    main.o(.text.watchdog_task) refers to peripheral_timer.o(.text.TMR_WatchDogRestart) for TMR_WatchDogRestart
+    main.o(.ARM.exidx.text.watchdog_task) refers to main.o(.text.watchdog_task) for [Anonymous Symbol]
+    main.o(.text.packet_schedule_task) refers to main.o(.bss.sem_wakeup) for sem_wakeup
+    main.o(.text.packet_schedule_task) refers to main.o(.rodata.str1.1) for .L.str.5
+    main.o(.text.packet_schedule_task) refers to peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord) for EFUSE_WriteEfuseDataWord
+    main.o(.text.packet_schedule_task) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) for SYSCTRL_ResetBlock
+    main.o(.text.packet_schedule_task) refers to peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) for SYSCTRL_ReleaseBlock
+    main.o(.text.packet_schedule_task) refers to peripheral_efuse.o(.text.EFUSE_SetRdFlag) for EFUSE_SetRdFlag
+    main.o(.text.packet_schedule_task) refers to peripheral_efuse.o(.text.EFUSE_GetDataValidFlag) for EFUSE_GetDataValidFlag
+    main.o(.text.packet_schedule_task) refers to peripheral_efuse.o(.text.EFUSE_GetEfuseData) for EFUSE_GetEfuseData
+    main.o(.ARM.exidx.text.packet_schedule_task) refers to main.o(.text.packet_schedule_task) for [Anonymous Symbol]
+    profile.o(.text.setup_profile) refers to profile.o(.rodata.str1.1) for .L.str
+    profile.o(.text.setup_profile) refers to profile.o(.text.att_read_callback) for att_read_callback
+    profile.o(.text.setup_profile) refers to profile.o(.text.att_write_callback) for att_write_callback
+    profile.o(.text.setup_profile) refers to profile.o(.bss.hci_event_callback_registration) for hci_event_callback_registration
+    profile.o(.text.setup_profile) refers to profile.o(.text.user_packet_handler) for user_packet_handler
+    profile.o(.ARM.exidx.text.setup_profile) refers to profile.o(.text.setup_profile) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.att_read_callback) refers to profile.o(.text.att_read_callback) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.att_write_callback) refers to profile.o(.text.att_write_callback) for [Anonymous Symbol]
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.hci_event_packet_get_type) for hci_event_packet_get_type
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.btstack_event_state_get_state) for btstack_event_state_get_state
+    profile.o(.text.user_packet_handler) refers to profile.o(.rodata.user_packet_handler.rand_addr) for user_packet_handler.rand_addr
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.setup_adv) for setup_adv
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.hci_event_command_complete_get_command_opcode) for hci_event_command_complete_get_command_opcode
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.hci_event_le_meta_get_subevent_code) for hci_event_le_meta_get_subevent_code
+    profile.o(.text.user_packet_handler) refers to profile.o(.rodata.profile_data) for profile_data
+    profile.o(.text.user_packet_handler) refers to profile.o(.rodata.adv_sets_en) for adv_sets_en
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.hci_event_packet_get_user_msg) for hci_event_packet_get_user_msg
+    profile.o(.text.user_packet_handler) refers to profile.o(.text.user_msg_handler) for user_msg_handler
+    profile.o(.ARM.exidx.text.user_packet_handler) refers to profile.o(.text.user_packet_handler) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.hci_event_packet_get_type) refers to profile.o(.text.hci_event_packet_get_type) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.btstack_event_state_get_state) refers to profile.o(.text.btstack_event_state_get_state) for [Anonymous Symbol]
+    profile.o(.text.setup_adv) refers to profile.o(.rodata.adv_data) for adv_data
+    profile.o(.text.setup_adv) refers to profile.o(.rodata.scan_data) for scan_data
+    profile.o(.text.setup_adv) refers to profile.o(.rodata.adv_sets_en) for adv_sets_en
+    profile.o(.ARM.exidx.text.setup_adv) refers to profile.o(.text.setup_adv) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.hci_event_command_complete_get_command_opcode) refers to profile.o(.text.hci_event_command_complete_get_command_opcode) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.hci_event_le_meta_get_subevent_code) refers to profile.o(.text.hci_event_le_meta_get_subevent_code) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.hci_event_packet_get_user_msg) refers to profile.o(.text.hci_event_packet_get_user_msg) for [Anonymous Symbol]
+    profile.o(.ARM.exidx.text.user_msg_handler) refers to profile.o(.text.user_msg_handler) for [Anonymous Symbol]
+    startup_ing91600.o(RESET) refers to startup_ing91600.o(.text) for Reset_Handler
+    startup_ing91600.o(.text) refers to init.o(.text) for __scatterload
+    startup_ing91600.o(.text) refers to main.o(.text.app_main) for app_main
+    peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateSet) refers to peripheral_uart.o(.text.apUART_BaudRateSet) for [Anonymous Symbol]
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to dfltui.o(.text) for __aeabi_ui2d
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to dadd.o(.text) for __aeabi_dadd
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to ddiv.o(.text) for __aeabi_ddiv
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to d2f.o(.text) for __aeabi_d2f
+    peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateGet) refers to peripheral_uart.o(.text.apUART_BaudRateGet) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_Rece_ERROR) refers to peripheral_uart.o(.text.apUART_Check_Rece_ERROR) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_EMPTY) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_FULL) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_FULL) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_EMPTY) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_EMPTY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_FULL) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_BUSY) refers to peripheral_uart.o(.text.apUART_Check_BUSY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Get_ITStatus) refers to peripheral_uart.o(.text.apUART_Get_ITStatus) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Enable_TRANSMIT_INT) refers to peripheral_uart.o(.text.apUART_Enable_TRANSMIT_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Disable_TRANSMIT_INT) refers to peripheral_uart.o(.text.apUART_Disable_TRANSMIT_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Enable_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Disable_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Clr_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_TX_INT) refers to peripheral_uart.o(.text.apUART_Clr_TX_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Get_all_raw_int_stat) refers to peripheral_uart.o(.text.apUART_Get_all_raw_int_stat) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_NonRx_INT) refers to peripheral_uart.o(.text.apUART_Clr_NonRx_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT) for apUART_Disable_RECEIVE_INT
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_disable) for uart_disable
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY) for apUART_Check_RXFIFO_EMPTY
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_empty_fifo) for uart_empty_fifo
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_enable_fifo) for uart_enable_fifo
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_enable) for uart_enable
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT) for apUART_Enable_RECEIVE_INT
+    peripheral_uart.o(.ARM.exidx.text.uart_reset) refers to peripheral_uart.o(.text.uart_reset) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_disable) refers to peripheral_uart.o(.text.uart_disable) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_empty_fifo) refers to peripheral_uart.o(.text.uart_empty_fifo) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_enable_fifo) refers to peripheral_uart.o(.text.uart_enable_fifo) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_enable) refers to peripheral_uart.o(.text.uart_enable) for [Anonymous Symbol]
+    peripheral_uart.o(.text.apUART_Initialize) refers to peripheral_uart.o(.text.apUART_BaudRateSet) for apUART_BaudRateSet
+    peripheral_uart.o(.ARM.exidx.text.apUART_Initialize) refers to peripheral_uart.o(.text.apUART_Initialize) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_SendData) refers to peripheral_uart.o(.text.UART_SendData) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_ReceData) refers to peripheral_uart.o(.text.UART_ReceData) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_DmaEnable) refers to peripheral_uart.o(.text.UART_DmaEnable) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.pin_id_for_input_source) for pin_id_for_input_source
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.source_id_on_pin) for source_id_on_pin
+    peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.source_tab) for PINCTRL_SelSpiIn.source_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.reg_tab) for PINCTRL_SelSpiIn.reg_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.bit_offset_tab) for PINCTRL_SelSpiIn.bit_offset_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelIrIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelIrIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelIrIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2sIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartRxdIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartCtsIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_Pull) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPdmIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelKeyScanColIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPCAPIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelQDECIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.source_id_on_pin) refers to peripheral_pinctrl.o(.rodata.io_output_source_map) for io_output_source_map
+    peripheral_pinctrl.o(.ARM.exidx.text.source_id_on_pin) refers to peripheral_pinctrl.o(.text.source_id_on_pin) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.set_reg_bits) refers to peripheral_pinctrl.o(.text.set_reg_bits) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_DisableAllInputs) refers to peripheral_pinctrl.o(.text.PINCTRL_DisableAllInputs) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetDriveStrength) refers to peripheral_pinctrl.o(.text.PINCTRL_SetDriveStrength) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAntSelPins) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) for PINCTRL_EnableAnalog
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUSB) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.pin_id_for_input_source) refers to peripheral_pinctrl.o(.rodata.io_output_source_map) for io_output_source_map
+    peripheral_pinctrl.o(.ARM.exidx.text.pin_id_for_input_source) refers to peripheral_pinctrl.o(.text.pin_id_for_input_source) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for SYSCTRL_ClkGateCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClkGateCtrl) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for SYSCTRL_ClkGateCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) for SYSCTRL_SetClkGate
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) for SYSCTRL_ClearClkGate
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for SYSCTRL_ResetBlockCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlockCtrl) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for SYSCTRL_ResetBlockCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ReleaseBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bit) refers to peripheral_sysctrl.o(.text.set_reg_bit) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bits) refers to peripheral_sysctrl.o(.text.set_reg_bits) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUartClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSlowClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePLL) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetSlowClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for SYSCTRL_GetCLK32k
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) for SYSCTRL_SelectSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) for SYSCTRL_TuneSlowRC
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_TuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider) refers to peripheral_sysctrl.o(.text.get_safe_divider) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for SYSCTRL_GetHClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for SYSCTRL_GetCLK32k
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider6) for get_safe_divider6
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for SYSCTRL_GetHClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) for SYSCTRL_GetAdcClkDiv
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider10) for get_safe_divider10
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for SYSCTRL_GetPClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider6) refers to peripheral_sysctrl.o(.text.get_safe_divider6) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider10) refers to peripheral_sysctrl.o(.text.get_safe_divider10) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetAdcClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTypeAClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUsedDmaItems) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUsedDmaItems) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetDmaId) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetDmaId) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutput) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_WaitForLDO) refers to peripheral_sysctrl.o(.text.SYSCTRL_WaitForLDO) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_USBPhyConfig) refers to peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetAllBlocks) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetAllBlocks) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableWakeupSourceDetection) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetLastWakeupSource) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetLastWakeupSource) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_SetOpMode) refers to peripheral_timer.o(.text.TMR_SetOpMode) for [Anonymous Symbol]
+    peripheral_timer.o(.text.TMR_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for SYSCTRL_GetPClk
+    peripheral_timer.o(.text.TMR_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetClk) for SYSCTRL_GetClk
+    peripheral_timer.o(.ARM.exidx.text.TMR_GetClk) refers to peripheral_timer.o(.text.TMR_GetClk) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_SetReload) refers to peripheral_timer.o(.text.TMR_SetReload) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_Enable) refers to peripheral_timer.o(.text.TMR_Enable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntEnable) refers to peripheral_timer.o(.text.TMR_IntEnable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_GetCMP) refers to peripheral_timer.o(.text.TMR_GetCMP) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntClr) refers to peripheral_timer.o(.text.TMR_IntClr) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntHappened) refers to peripheral_timer.o(.text.TMR_IntHappened) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogEnable3) refers to peripheral_timer.o(.text.TMR_WatchDogEnable3) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogDisable) refers to peripheral_timer.o(.text.TMR_WatchDogDisable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogRestart) refers to peripheral_timer.o(.text.TMR_WatchDogRestart) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogClearInt) refers to peripheral_timer.o(.text.TMR_WatchDogClearInt) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_SetDirection) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_SetDirection) refers to peripheral_gpio.o(.text.GIO_SetDirection) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_MaskedWrite) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetDirection) refers to peripheral_gpio.o(.text.GIO_GetDirection) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_WriteValue) refers to peripheral_gpio.o(.text.GIO_WriteValue) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ReadValue) refers to peripheral_gpio.o(.text.GIO_ReadValue) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.map_int_mode) for map_int_mode
+    peripheral_gpio.o(.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.GIO_ConfigIntSource) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.map_int_mode) refers to peripheral_gpio.o(.text.map_int_mode) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetIntStatus) refers to peripheral_gpio.o(.text.GIO_GetIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearIntStatus) refers to peripheral_gpio.o(.text.GIO_ClearIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceCtrl) refers to peripheral_gpio.o(.text.GIO_DebounceCtrl) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_DebounceEn) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceEn) refers to peripheral_gpio.o(.text.GIO_DebounceEn) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_WriteAll) refers to peripheral_gpio.o(.text.GIO_WriteAll) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ReadAll) refers to peripheral_gpio.o(.text.GIO_ReadAll) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetAllIntStatus) refers to peripheral_gpio.o(.text.GIO_GetAllIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearAllIntStatus) refers to peripheral_gpio.o(.text.GIO_ClearAllIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableRetentionGroupA) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupA) refers to peripheral_gpio.o(.text.GIO_EnableRetentionGroupA) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableRetentionGroupB) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupB) refers to peripheral_gpio.o(.text.GIO_EnableRetentionGroupB) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableHighZGroupB) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableHighZGroupB) refers to peripheral_gpio.o(.text.GIO_EnableHighZGroupB) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeepSleepWakeupSource) refers to peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeeperSleepWakeupSourceGroupA) refers to peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_SetBits) refers to peripheral_gpio.o(.text.GIO_SetBits) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearBits) refers to peripheral_gpio.o(.text.GIO_ClearBits) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_SetCfg0) refers to peripheral_efuse.o(.text.EFUSE_SetCfg0) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetStatusBusy) refers to peripheral_efuse.o(.text.EFUSE_GetStatusBusy) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetStatusState) refers to peripheral_efuse.o(.text.EFUSE_GetStatusState) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetDataValidFlag) refers to peripheral_efuse.o(.text.EFUSE_GetDataValidFlag) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_SetRdFlag) refers to peripheral_efuse.o(.text.EFUSE_SetRdFlag) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetEfuseData) refers to peripheral_efuse.o(.text.EFUSE_GetEfuseData) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_WriteEfuseDataBitToOne) refers to peripheral_efuse.o(.text.EFUSE_WriteEfuseDataBitToOne) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_UnLock) refers to peripheral_efuse.o(.text.EFUSE_UnLock) for [Anonymous Symbol]
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_Lock) refers to peripheral_efuse.o(.text.EFUSE_Lock) for [Anonymous Symbol]
+    peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord) refers to peripheral_efuse.o(.text.EFUSE_UnLock) for EFUSE_UnLock
+    peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord) refers to peripheral_efuse.o(.text.EFUSE_GetStatusBusy) for EFUSE_GetStatusBusy
+    peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord) refers to peripheral_efuse.o(.text.EFUSE_Lock) for EFUSE_Lock
+    peripheral_efuse.o(.ARM.exidx.text.EFUSE_WriteEfuseDataWord) refers to peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBufferNoLock) refers to trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock) for [Anonymous Symbol]
+    trace.o(.text._DoInit) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text._DoInit) refers to trace.o(.rodata.str1.1) for .L.str.6
+    trace.o(.text._DoInit) refers to trace.o(.bss._acUpBuffer) for _acUpBuffer
+    trace.o(.text._DoInit) refers to trace.o(.bss._acDownBuffer) for _acDownBuffer
+    trace.o(.text._DoInit) refers to strcpy.o(.text) for strcpy
+    trace.o(.ARM.exidx.text._DoInit) refers to trace.o(.text._DoInit) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_ReadNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_ReadNoLock) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_ReadNoLock) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text.SEGGER_RTT_ReadNoLock) refers to trace.o(.text.SEGGER_RTT_ReadNoLock) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_ReadUpBuffer) refers to trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock) for SEGGER_RTT_ReadUpBufferNoLock
+    trace.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBuffer) refers to trace.o(.text.SEGGER_RTT_ReadUpBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_Read) refers to trace.o(.text.SEGGER_RTT_ReadNoLock) for SEGGER_RTT_ReadNoLock
+    trace.o(.ARM.exidx.text.SEGGER_RTT_Read) refers to trace.o(.text.SEGGER_RTT_Read) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WriteWithOverwriteNoLock) refers to trace.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to trace.o(.text._GetAvailWriteSpace) for _GetAvailWriteSpace
+    trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to trace.o(.text._WriteNoCheck) for _WriteNoCheck
+    trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) refers to trace.o(.text._WriteBlocking) for _WriteBlocking
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBufferNoLock) refers to trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text._GetAvailWriteSpace) refers to trace.o(.text._GetAvailWriteSpace) for [Anonymous Symbol]
+    trace.o(.text._WriteNoCheck) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text._WriteNoCheck) refers to trace.o(.text._WriteNoCheck) for [Anonymous Symbol]
+    trace.o(.text._WriteBlocking) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text._WriteBlocking) refers to trace.o(.text._WriteBlocking) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WriteNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_WriteNoLock) refers to trace.o(.text._GetAvailWriteSpace) for _GetAvailWriteSpace
+    trace.o(.text.SEGGER_RTT_WriteNoLock) refers to trace.o(.text._WriteNoCheck) for _WriteNoCheck
+    trace.o(.text.SEGGER_RTT_WriteNoLock) refers to trace.o(.text._WriteBlocking) for _WriteBlocking
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WriteNoLock) refers to trace.o(.text.SEGGER_RTT_WriteNoLock) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WriteDownBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_WriteDownBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_WriteDownBuffer) refers to trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock) for SEGGER_RTT_WriteDownBufferNoLock
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBuffer) refers to trace.o(.text.SEGGER_RTT_WriteDownBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_Write) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_Write) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_Write) refers to trace.o(.text.SEGGER_RTT_WriteNoLock) for SEGGER_RTT_WriteNoLock
+    trace.o(.ARM.exidx.text.SEGGER_RTT_Write) refers to trace.o(.text.SEGGER_RTT_Write) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WriteString) refers to strlen.o(.text) for strlen
+    trace.o(.text.SEGGER_RTT_WriteString) refers to trace.o(.text.SEGGER_RTT_Write) for SEGGER_RTT_Write
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WriteString) refers to trace.o(.text.SEGGER_RTT_WriteString) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_PutCharSkipNoLock) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkipNoLock) refers to trace.o(.text.SEGGER_RTT_PutCharSkipNoLock) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_PutCharSkip) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_PutCharSkip) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkip) refers to trace.o(.text.SEGGER_RTT_PutCharSkip) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_PutChar) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_PutChar) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_PutChar) refers to trace.o(.text.SEGGER_RTT_PutChar) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_GetKey) refers to trace.o(.text.SEGGER_RTT_Read) for SEGGER_RTT_Read
+    trace.o(.ARM.exidx.text.SEGGER_RTT_GetKey) refers to trace.o(.text.SEGGER_RTT_GetKey) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_WaitKey) refers to trace.o(.text.SEGGER_RTT_GetKey) for SEGGER_RTT_GetKey
+    trace.o(.ARM.exidx.text.SEGGER_RTT_WaitKey) refers to trace.o(.text.SEGGER_RTT_WaitKey) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_HasKey) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_HasKey) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_HasKey) refers to trace.o(.text.SEGGER_RTT_HasKey) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_HasData) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.ARM.exidx.text.SEGGER_RTT_HasData) refers to trace.o(.text.SEGGER_RTT_HasData) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_HasDataUp) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.ARM.exidx.text.SEGGER_RTT_HasDataUp) refers to trace.o(.text.SEGGER_RTT_HasDataUp) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_AllocDownBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_AllocDownBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_AllocDownBuffer) refers to trace.o(.text.SEGGER_RTT_AllocDownBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_AllocUpBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_AllocUpBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_AllocUpBuffer) refers to trace.o(.text.SEGGER_RTT_AllocUpBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_ConfigUpBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_ConfigUpBuffer) refers to trace.o(.text.SEGGER_RTT_ConfigUpBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_ConfigDownBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_ConfigDownBuffer) refers to trace.o(.text.SEGGER_RTT_ConfigDownBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_SetNameUpBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_SetNameUpBuffer) refers to trace.o(.text.SEGGER_RTT_SetNameUpBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_SetNameDownBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_SetNameDownBuffer) refers to trace.o(.text.SEGGER_RTT_SetNameDownBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_SetFlagsUpBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsUpBuffer) refers to trace.o(.text.SEGGER_RTT_SetFlagsUpBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_SetFlagsDownBuffer) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsDownBuffer) refers to trace.o(.text.SEGGER_RTT_SetFlagsDownBuffer) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_Init) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.ARM.exidx.text.SEGGER_RTT_Init) refers to trace.o(.text.SEGGER_RTT_Init) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.data._aTerminalId) for _aTerminalId
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.bss._ActiveTerminal) for _ActiveTerminal
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.text._WriteBlocking) for _WriteBlocking
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.text._GetAvailWriteSpace) for _GetAvailWriteSpace
+    trace.o(.text.SEGGER_RTT_SetTerminal) refers to trace.o(.text._WriteNoCheck) for _WriteNoCheck
+    trace.o(.ARM.exidx.text.SEGGER_RTT_SetTerminal) refers to trace.o(.text.SEGGER_RTT_SetTerminal) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.text._DoInit) for _DoInit
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to strlen.o(.text) for strlen
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.text._GetAvailWriteSpace) for _GetAvailWriteSpace
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.text._PostTerminalSwitch) for _PostTerminalSwitch
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.text._WriteBlocking) for _WriteBlocking
+    trace.o(.text.SEGGER_RTT_TerminalOut) refers to trace.o(.bss._ActiveTerminal) for _ActiveTerminal
+    trace.o(.ARM.exidx.text.SEGGER_RTT_TerminalOut) refers to trace.o(.text.SEGGER_RTT_TerminalOut) for [Anonymous Symbol]
+    trace.o(.text._PostTerminalSwitch) refers to trace.o(.data._aTerminalId) for _aTerminalId
+    trace.o(.text._PostTerminalSwitch) refers to trace.o(.text._WriteBlocking) for _WriteBlocking
+    trace.o(.ARM.exidx.text._PostTerminalSwitch) refers to trace.o(.text._PostTerminalSwitch) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_GetAvailWriteSpace) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.text.SEGGER_RTT_GetAvailWriteSpace) refers to trace.o(.text._GetAvailWriteSpace) for _GetAvailWriteSpace
+    trace.o(.ARM.exidx.text.SEGGER_RTT_GetAvailWriteSpace) refers to trace.o(.text.SEGGER_RTT_GetAvailWriteSpace) for [Anonymous Symbol]
+    trace.o(.text.SEGGER_RTT_GetBytesInBuffer) refers to trace.o(.bss._SEGGER_RTT) for _SEGGER_RTT
+    trace.o(.ARM.exidx.text.SEGGER_RTT_GetBytesInBuffer) refers to trace.o(.text.SEGGER_RTT_GetBytesInBuffer) for [Anonymous Symbol]
+    trace.o(.text.trace_flush) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for apUART_Check_TXFIFO_FULL
+    trace.o(.text.trace_flush) refers to peripheral_uart.o(.text.UART_SendData) for UART_SendData
+    trace.o(.ARM.exidx.text.trace_flush) refers to trace.o(.text.trace_flush) for [Anonymous Symbol]
+    trace.o(.text.cb_trace_uart) refers to trace.o(.text.trace_add_buffer) for trace_add_buffer
+    trace.o(.text.cb_trace_uart) refers to trace.o(.text.trace_trigger_output) for trace_trigger_output
+    trace.o(.ARM.exidx.text.cb_trace_uart) refers to trace.o(.text.cb_trace_uart) for [Anonymous Symbol]
+    trace.o(.text.trace_add_buffer) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.ARM.exidx.text.trace_add_buffer) refers to trace.o(.text.trace_add_buffer) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.trace_trigger_output) refers to trace.o(.text.trace_trigger_output) for [Anonymous Symbol]
+    trace.o(.text.cb_trace_rtt) refers to trace.o(.text.SEGGER_RTT_GetAvailWriteSpace) for SEGGER_RTT_GetAvailWriteSpace
+    trace.o(.text.cb_trace_rtt) refers to trace.o(.text.SEGGER_RTT_Write) for SEGGER_RTT_Write
+    trace.o(.ARM.exidx.text.cb_trace_rtt) refers to trace.o(.text.cb_trace_rtt) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.write_flash) refers to trace.o(.text.write_flash) for [Anonymous Symbol]
+    trace.o(.text.program_flash) refers to trace.o(.rodata.str1.1) for .L.str
+    trace.o(.ARM.exidx.text.program_flash) refers to trace.o(.text.program_flash) for [Anonymous Symbol]
+    trace.o(.text.cb_trace_flash) refers to trace.o(.text.flash_trace_append) for flash_trace_append
+    trace.o(.ARM.exidx.text.cb_trace_flash) refers to trace.o(.text.cb_trace_flash) for [Anonymous Symbol]
+    trace.o(.text.flash_trace_append) refers to memcpya.o(.text) for __aeabi_memcpy
+    trace.o(.text.flash_trace_append) refers to trace.o(.text.flash_trace_aligned_append) for flash_trace_aligned_append
+    trace.o(.ARM.exidx.text.flash_trace_append) refers to trace.o(.text.flash_trace_append) for [Anonymous Symbol]
+    trace.o(.text.trace_uart_init) refers to trace.o(.rodata.str1.1) for .L.str.1
+    trace.o(.text.trace_uart_init) refers to trace.o(.text.trace_task) for trace_task
+    trace.o(.ARM.exidx.text.trace_uart_init) refers to trace.o(.text.trace_uart_init) for [Anonymous Symbol]
+    trace.o(.text.trace_task) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for apUART_Check_TXFIFO_FULL
+    trace.o(.text.trace_task) refers to peripheral_uart.o(.text.UART_SendData) for UART_SendData
+    trace.o(.ARM.exidx.text.trace_task) refers to trace.o(.text.trace_task) for [Anonymous Symbol]
+    trace.o(.text.trace_rtt_init) refers to trace.o(.text.SEGGER_RTT_Init) for SEGGER_RTT_Init
+    trace.o(.ARM.exidx.text.trace_rtt_init) refers to trace.o(.text.trace_rtt_init) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.trace_flash_init) refers to trace.o(.text.trace_flash_init) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.trace_flash_enable) refers to trace.o(.text.trace_flash_enable) for [Anonymous Symbol]
+    trace.o(.text.trace_flash_erase_all) refers to trace.o(.text.program_flash) for program_flash
+    trace.o(.ARM.exidx.text.trace_flash_erase_all) refers to trace.o(.text.trace_flash_erase_all) for [Anonymous Symbol]
+    trace.o(.text.trace_uart_isr) refers to trace.o(.text.trace_trigger_output) for trace_trigger_output
+    trace.o(.ARM.exidx.text.trace_uart_isr) refers to trace.o(.text.trace_uart_isr) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.trace_air_init) refers to trace.o(.text.trace_air_init) for [Anonymous Symbol]
+    trace.o(.text.trace_air_enable) refers to trace.o(.text.trace_air_send_req) for trace_air_send_req
+    trace.o(.ARM.exidx.text.trace_air_enable) refers to trace.o(.text.trace_air_enable) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.trace_air_send_req) refers to trace.o(.text.trace_air_send_req) for [Anonymous Symbol]
+    trace.o(.text.trace_air_send) refers to trace.o(.text.peek_data) for peek_data
+    trace.o(.ARM.exidx.text.trace_air_send) refers to trace.o(.text.trace_air_send) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.peek_data) refers to trace.o(.text.peek_data) for [Anonymous Symbol]
+    trace.o(.text.cb_trace_air) refers to trace.o(.text.trace_air_send_req) for trace_air_send_req
+    trace.o(.text.cb_trace_air) refers to trace.o(.text.trace_add_buffer) for trace_add_buffer
+    trace.o(.ARM.exidx.text.cb_trace_air) refers to trace.o(.text.cb_trace_air) for [Anonymous Symbol]
+    trace.o(.text.trace_full_dump) refers to trace.o(.bss.trace_full_dump.str) for trace_full_dump.str
+    trace.o(.text.trace_full_dump) refers to trace.o(.rodata.str1.1) for .L.str.2
+    trace.o(.text.trace_full_dump) refers to printfa.o(i.__0sprintf) for sprintf
+    trace.o(.text.trace_full_dump) refers to trace.o(.bss.trace_full_dump.buf) for trace_full_dump.buf
+    trace.o(.text.trace_full_dump) refers to trace.o(.text.hex_dump) for hex_dump
+    trace.o(.ARM.exidx.text.trace_full_dump) refers to trace.o(.text.trace_full_dump) for [Anonymous Symbol]
+    trace.o(.text.hex_dump) refers to trace.o(.text.hex_dump_line) for hex_dump_line
+    trace.o(.ARM.exidx.text.hex_dump) refers to trace.o(.text.hex_dump) for [Anonymous Symbol]
+    trace.o(.text.flash_trace_aligned_append) refers to trace.o(.text.program_flash) for program_flash
+    trace.o(.text.flash_trace_aligned_append) refers to trace.o(.text.write_flash) for write_flash
+    trace.o(.ARM.exidx.text.flash_trace_aligned_append) refers to trace.o(.text.flash_trace_aligned_append) for [Anonymous Symbol]
+    trace.o(.text.hex_dump_line) refers to trace.o(.text.nibble_to_char) for nibble_to_char
+    trace.o(.ARM.exidx.text.hex_dump_line) refers to trace.o(.text.hex_dump_line) for [Anonymous Symbol]
+    trace.o(.ARM.exidx.text.nibble_to_char) refers to trace.o(.text.nibble_to_char) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to main.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to main.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to main.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to main.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_ing91600.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_ing91600.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to startup_ing91600.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to startup_ing91600.o(.text) for main
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.cb_putc), (8 bytes).
+    Removing main.o(.text.fputc), (22 bytes).
+    Removing main.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing main.o(.ARM.exidx.text.config_uart), (8 bytes).
+    Removing main.o(.ARM.exidx.text.gpio_isr), (8 bytes).
+    Removing main.o(.ARM.exidx.text.key_detector_start_calc), (8 bytes).
+    Removing main.o(.ARM.exidx.text.setup_peripherals), (8 bytes).
+    Removing main.o(.ARM.exidx.text.on_deep_sleep_wakeup), (8 bytes).
+    Removing main.o(.ARM.exidx.text.query_deep_sleep_allowed), (8 bytes).
+    Removing main.o(.ARM.exidx.text.app_main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_hard_fault), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_assertion), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_heap_out_of_mem), (8 bytes).
+    Removing main.o(.ARM.exidx.text.watchdog_task), (8 bytes).
+    Removing main.o(.ARM.exidx.text.packet_schedule_task), (8 bytes).
+    Removing profile.o(.text), (0 bytes).
+    Removing profile.o(.text.setup_profile), (76 bytes).
+    Removing profile.o(.ARM.exidx.text.setup_profile), (8 bytes).
+    Removing profile.o(.text.att_read_callback), (32 bytes).
+    Removing profile.o(.ARM.exidx.text.att_read_callback), (8 bytes).
+    Removing profile.o(.text.att_write_callback), (38 bytes).
+    Removing profile.o(.ARM.exidx.text.att_write_callback), (8 bytes).
+    Removing profile.o(.text.user_packet_handler), (220 bytes).
+    Removing profile.o(.ARM.exidx.text.user_packet_handler), (8 bytes).
+    Removing profile.o(.text.hci_event_packet_get_type), (12 bytes).
+    Removing profile.o(.ARM.exidx.text.hci_event_packet_get_type), (8 bytes).
+    Removing profile.o(.text.btstack_event_state_get_state), (12 bytes).
+    Removing profile.o(.ARM.exidx.text.btstack_event_state_get_state), (8 bytes).
+    Removing profile.o(.text.setup_adv), (100 bytes).
+    Removing profile.o(.ARM.exidx.text.setup_adv), (8 bytes).
+    Removing profile.o(.text.hci_event_command_complete_get_command_opcode), (14 bytes).
+    Removing profile.o(.ARM.exidx.text.hci_event_command_complete_get_command_opcode), (8 bytes).
+    Removing profile.o(.text.hci_event_le_meta_get_subevent_code), (12 bytes).
+    Removing profile.o(.ARM.exidx.text.hci_event_le_meta_get_subevent_code), (8 bytes).
+    Removing profile.o(.text.hci_event_packet_get_user_msg), (12 bytes).
+    Removing profile.o(.ARM.exidx.text.hci_event_packet_get_user_msg), (8 bytes).
+    Removing profile.o(.text.user_msg_handler), (16 bytes).
+    Removing profile.o(.ARM.exidx.text.user_msg_handler), (8 bytes).
+    Removing profile.o(.rodata.str1.1), (15 bytes).
+    Removing profile.o(.bss.hci_event_callback_registration), (8 bytes).
+    Removing profile.o(.rodata.user_packet_handler.rand_addr), (6 bytes).
+    Removing profile.o(.rodata.profile_data), (104 bytes).
+    Removing profile.o(.rodata.adv_sets_en), (6 bytes).
+    Removing profile.o(.rodata.adv_data), (14 bytes).
+    Removing profile.o(.rodata.scan_data), (1 bytes).
+    Removing startup_ing91600.o(HEAP), (0 bytes).
+    Removing peripheral_uart.o(.text), (0 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateSet), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_BaudRateGet), (184 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateGet), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_Rece_ERROR), (112 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_Rece_ERROR), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY), (16 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_RXFIFO_FULL), (16 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_FULL), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_TXFIFO_EMPTY), (16 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_FULL), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_BUSY), (16 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_BUSY), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Get_ITStatus), (32 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Get_ITStatus), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Enable_TRANSMIT_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Enable_TRANSMIT_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Disable_TRANSMIT_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Disable_TRANSMIT_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Enable_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Disable_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_RECEIVE_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_TX_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_TX_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Get_all_raw_int_stat), (12 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Get_all_raw_int_stat), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_NonRx_INT), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_NonRx_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_reset), (70 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_reset), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_disable), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_disable), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_empty_fifo), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_empty_fifo), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_enable_fifo), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_enable_fifo), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_enable), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_enable), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Initialize), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_SendData), (8 bytes).
+    Removing peripheral_uart.o(.text.UART_ReceData), (14 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_ReceData), (8 bytes).
+    Removing peripheral_uart.o(.text.UART_DmaEnable), (44 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_DmaEnable), (8 bytes).
+    Removing peripheral_pinctrl.o(.text), (0 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelSwIn), (94 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSwIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelInput), (144 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelInput), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetPadMux), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn), (518 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSpiIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelIrIn), (32 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelIrIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn), (122 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2sIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartIn), (180 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn), (82 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartRxdIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn), (80 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartCtsIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn), (266 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_Pull), (144 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_Pull), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn), (124 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cSclIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn), (30 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPdmIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn), (220 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelKeyScanColIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn), (40 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPCAPIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn), (86 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelQDECIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.source_id_on_pin), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.set_reg_bits), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_DisableAllInputs), (48 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_DisableAllInputs), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SetDriveStrength), (110 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetDriveStrength), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins), (86 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAntSelPins), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUSB), (102 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUSB), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog), (140 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAnalog), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.pin_id_for_input_source), (158 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.pin_id_for_input_source), (8 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.source_tab), (12 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.reg_tab), (12 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.bit_offset_tab), (12 bytes).
+    Removing peripheral_sysctrl.o(.text), (0 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate), (22 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGate), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClkGateCtrl), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGate), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti), (66 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGateMulti), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGateMulti), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlock), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlockCtrl), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ReleaseBlock), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk), (86 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTimerClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bit), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.set_reg_bits), (58 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bits), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk), (76 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPWMClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk), (74 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectKeyScanClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk), (48 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPDMClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk), (126 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSpiClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk), (46 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUartClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk), (74 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectI2sClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk), (120 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectHClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk), (44 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUSBClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk), (110 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectFlashClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk), (116 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSlowClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectQDECClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL), (48 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePLL), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC), (96 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk), (162 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetSlowClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k), (96 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCLK32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k), (56 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCLK32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k), (28 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCPU32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k), (42 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCPU32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC), (396 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_AutoTuneSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC), (28 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_TuneSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk), (82 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPLLClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetFlashClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.get_safe_divider), (50 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk), (346 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigPLLClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetHClk), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetHClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv), (40 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetPClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv), (14 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetPClk), (30 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetClk), (656 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.get_safe_divider6), (50 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider6), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv), (54 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetAdcClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.get_safe_divider10), (50 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider10), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetAdcClkDiv), (44 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetAdcClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk), (146 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTypeAClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectUsedDmaItems), (200 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUsedDmaItems), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetDmaId), (134 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetDmaId), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR), (104 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigBOR), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash), (44 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutputFlash), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput), (32 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutput), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_WaitForLDO), (2 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_WaitForLDO), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_USBPhyConfig), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ResetAllBlocks), (16 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetAllBlocks), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection), (20 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableWakeupSourceDetection), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetLastWakeupSource), (322 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetLastWakeupSource), (8 bytes).
+    Removing peripheral_timer.o(.text), (0 bytes).
+    Removing peripheral_timer.o(.text.TMR_SetOpMode), (68 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_SetOpMode), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_GetClk), (108 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_GetClk), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_SetReload), (28 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_SetReload), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_Enable), (58 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_Enable), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntEnable), (58 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntEnable), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_GetCMP), (24 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_GetCMP), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntClr), (36 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntClr), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntHappened), (28 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntHappened), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogEnable3), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_WatchDogDisable), (44 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogDisable), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogRestart), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_WatchDogClearInt), (14 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogClearInt), (8 bytes).
+    Removing peripheral_gpio.o(.text), (0 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_SetDirection), (8 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_MaskedWrite), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetDirection), (118 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetDirection), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_WriteValue), (116 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_WriteValue), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ReadValue), (80 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ReadValue), (8 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ConfigIntSource), (8 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.map_int_mode), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetIntStatus), (80 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ClearIntStatus), (84 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_DebounceCtrl), (82 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceCtrl), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_DebounceEn), (90 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceEn), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_WriteAll), (50 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_WriteAll), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ReadAll), (28 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ReadAll), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetAllIntStatus), (28 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetAllIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearAllIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableRetentionGroupA), (58 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupA), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableRetentionGroupB), (184 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupB), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableHighZGroupB), (184 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableHighZGroupB), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource), (466 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeepSleepWakeupSource), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA), (54 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeeperSleepWakeupSourceGroupA), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_SetBits), (54 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_SetBits), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ClearBits), (54 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearBits), (8 bytes).
+    Removing peripheral_efuse.o(.text), (0 bytes).
+    Removing peripheral_efuse.o(.text.EFUSE_SetCfg0), (20 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_SetCfg0), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetStatusBusy), (8 bytes).
+    Removing peripheral_efuse.o(.text.EFUSE_GetStatusState), (16 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetStatusState), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetDataValidFlag), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_SetRdFlag), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_GetEfuseData), (8 bytes).
+    Removing peripheral_efuse.o(.text.EFUSE_WriteEfuseDataBitToOne), (56 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_WriteEfuseDataBitToOne), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_UnLock), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_Lock), (8 bytes).
+    Removing peripheral_efuse.o(.ARM.exidx.text.EFUSE_WriteEfuseDataWord), (8 bytes).
+    Removing trace.o(.text), (0 bytes).
+    Removing trace.o(.text.SEGGER_RTT_ReadUpBufferNoLock), (300 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBufferNoLock), (8 bytes).
+    Removing trace.o(.ARM.exidx.text._DoInit), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_ReadNoLock), (300 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_ReadNoLock), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_ReadUpBuffer), (48 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_ReadUpBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_Read), (48 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_Read), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_WriteWithOverwriteNoLock), (282 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WriteWithOverwriteNoLock), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_WriteDownBufferNoLock), (176 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBufferNoLock), (8 bytes).
+    Removing trace.o(.ARM.exidx.text._GetAvailWriteSpace), (8 bytes).
+    Removing trace.o(.ARM.exidx.text._WriteNoCheck), (8 bytes).
+    Removing trace.o(.ARM.exidx.text._WriteBlocking), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WriteNoLock), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_WriteDownBuffer), (72 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WriteDownBuffer), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_Write), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_WriteString), (30 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WriteString), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_PutCharSkipNoLock), (108 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkipNoLock), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_PutCharSkip), (154 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_PutCharSkip), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_PutChar), (182 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_PutChar), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_GetKey), (48 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_GetKey), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_WaitKey), (28 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_WaitKey), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_HasKey), (68 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_HasKey), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_HasData), (44 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_HasData), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_HasDataUp), (44 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_HasDataUp), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_AllocDownBuffer), (242 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_AllocDownBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_AllocUpBuffer), (242 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_AllocUpBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_ConfigUpBuffer), (204 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_ConfigUpBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_ConfigDownBuffer), (208 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_ConfigDownBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_SetNameUpBuffer), (112 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_SetNameUpBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_SetNameDownBuffer), (112 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_SetNameDownBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_SetFlagsUpBuffer), (112 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsUpBuffer), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_SetFlagsDownBuffer), (112 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_SetFlagsDownBuffer), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_Init), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_SetTerminal), (214 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_SetTerminal), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_TerminalOut), (342 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_TerminalOut), (8 bytes).
+    Removing trace.o(.text._PostTerminalSwitch), (50 bytes).
+    Removing trace.o(.ARM.exidx.text._PostTerminalSwitch), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_GetAvailWriteSpace), (8 bytes).
+    Removing trace.o(.text.SEGGER_RTT_GetBytesInBuffer), (100 bytes).
+    Removing trace.o(.ARM.exidx.text.SEGGER_RTT_GetBytesInBuffer), (8 bytes).
+    Removing trace.o(.text.trace_flush), (90 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_flush), (8 bytes).
+    Removing trace.o(.text.cb_trace_uart), (236 bytes).
+    Removing trace.o(.ARM.exidx.text.cb_trace_uart), (8 bytes).
+    Removing trace.o(.text.trace_add_buffer), (102 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_add_buffer), (8 bytes).
+    Removing trace.o(.text.trace_trigger_output), (26 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_trigger_output), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.cb_trace_rtt), (8 bytes).
+    Removing trace.o(.text.write_flash), (14 bytes).
+    Removing trace.o(.ARM.exidx.text.write_flash), (8 bytes).
+    Removing trace.o(.text.program_flash), (30 bytes).
+    Removing trace.o(.ARM.exidx.text.program_flash), (8 bytes).
+    Removing trace.o(.text.cb_trace_flash), (118 bytes).
+    Removing trace.o(.ARM.exidx.text.cb_trace_flash), (8 bytes).
+    Removing trace.o(.text.flash_trace_append), (216 bytes).
+    Removing trace.o(.ARM.exidx.text.flash_trace_append), (8 bytes).
+    Removing trace.o(.text.trace_uart_init), (64 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_uart_init), (8 bytes).
+    Removing trace.o(.text.trace_task), (118 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_task), (8 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_rtt_init), (8 bytes).
+    Removing trace.o(.text.trace_flash_init), (52 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_flash_init), (8 bytes).
+    Removing trace.o(.text.trace_flash_enable), (16 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_flash_enable), (8 bytes).
+    Removing trace.o(.text.trace_flash_erase_all), (60 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_flash_erase_all), (8 bytes).
+    Removing trace.o(.text.trace_uart_isr), (34 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_uart_isr), (8 bytes).
+    Removing trace.o(.text.trace_air_init), (40 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_air_init), (8 bytes).
+    Removing trace.o(.text.trace_air_enable), (86 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_air_enable), (8 bytes).
+    Removing trace.o(.text.trace_air_send_req), (74 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_air_send_req), (8 bytes).
+    Removing trace.o(.text.trace_air_send), (180 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_air_send), (8 bytes).
+    Removing trace.o(.text.peek_data), (132 bytes).
+    Removing trace.o(.ARM.exidx.text.peek_data), (8 bytes).
+    Removing trace.o(.text.cb_trace_air), (338 bytes).
+    Removing trace.o(.ARM.exidx.text.cb_trace_air), (8 bytes).
+    Removing trace.o(.text.trace_full_dump), (188 bytes).
+    Removing trace.o(.ARM.exidx.text.trace_full_dump), (8 bytes).
+    Removing trace.o(.text.hex_dump), (178 bytes).
+    Removing trace.o(.ARM.exidx.text.hex_dump), (8 bytes).
+    Removing trace.o(.text.flash_trace_aligned_append), (176 bytes).
+    Removing trace.o(.ARM.exidx.text.flash_trace_aligned_append), (8 bytes).
+    Removing trace.o(.text.hex_dump_line), (160 bytes).
+    Removing trace.o(.ARM.exidx.text.hex_dump_line), (8 bytes).
+    Removing trace.o(.text.nibble_to_char), (36 bytes).
+    Removing trace.o(.ARM.exidx.text.nibble_to_char), (8 bytes).
+    Removing trace.o(.data._aTerminalId), (16 bytes).
+    Removing trace.o(.bss._ActiveTerminal), (1 bytes).
+    Removing trace.o(.bss.trace_full_dump.str), (46 bytes).
+    Removing trace.o(.bss.trace_full_dump.buf), (20 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dfltui.o(.text), (26 bytes).
+    Removing d2f.o(.text), (56 bytes).
+    Removing fepilogue.o(.text), (110 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing dfixul.o(.text), (48 bytes).
+    Removing cdrcmple.o(.text), (48 bytes).
+
+456 unused section(s) (total 21337 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
+    ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
+    ../clib/microlib/string/strcpy.c         0x00000000   Number         0  strcpy.o ABSOLUTE
+    ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    peripheral_efuse.c                       0x00000000   Number         0  peripheral_efuse.o ABSOLUTE
+    peripheral_gpio.c                        0x00000000   Number         0  peripheral_gpio.o ABSOLUTE
+    peripheral_pinctrl.c                     0x00000000   Number         0  peripheral_pinctrl.o ABSOLUTE
+    peripheral_sysctrl.c                     0x00000000   Number         0  peripheral_sysctrl.o ABSOLUTE
+    peripheral_timer.c                       0x00000000   Number         0  peripheral_timer.o ABSOLUTE
+    peripheral_uart.c                        0x00000000   Number         0  peripheral_uart.o ABSOLUTE
+    profile.c                                0x00000000   Number         0  profile.o ABSOLUTE
+    src\startup_ing91600.s                   0x00000000   Number         0  startup_ing91600.o ABSOLUTE
+    trace.c                                  0x00000000   Number         0  trace.o ABSOLUTE
+    RESET                                    0x02028000   Section        8  startup_ing91600.o(RESET)
+    .ARM.Collect$$$$00000000                 0x02028008   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x02028008   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0202800c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x02028010   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x02028010   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x02028010   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x02028018   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x02028018   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x02028018   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x02028018   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x0202801c   Number         0  startup_ing91600.o(.text)
+    .text                                    0x0202801c   Section       40  startup_ing91600.o(.text)
+    .text                                    0x02028044   Section       36  init.o(.text)
+    .text                                    0x02028068   Section        0  uldiv.o(.text)
+    .text                                    0x020280ca   Section        0  memcpya.o(.text)
+    .text                                    0x020280ee   Section        0  strcpy.o(.text)
+    .text                                    0x02028100   Section        0  llshl.o(.text)
+    .text                                    0x0202811e   Section        0  llushr.o(.text)
+    [Anonymous Symbol]                       0x02028140   Section        0  peripheral_efuse.o(.text.EFUSE_GetDataValidFlag)
+    [Anonymous Symbol]                       0x02028150   Section        0  peripheral_efuse.o(.text.EFUSE_GetEfuseData)
+    [Anonymous Symbol]                       0x0202817c   Section        0  peripheral_efuse.o(.text.EFUSE_GetStatusBusy)
+    [Anonymous Symbol]                       0x0202818c   Section        0  peripheral_efuse.o(.text.EFUSE_Lock)
+    [Anonymous Symbol]                       0x020281a0   Section        0  peripheral_efuse.o(.text.EFUSE_SetRdFlag)
+    [Anonymous Symbol]                       0x020281b4   Section        0  peripheral_efuse.o(.text.EFUSE_UnLock)
+    [Anonymous Symbol]                       0x020281d8   Section        0  peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord)
+    [Anonymous Symbol]                       0x0202825c   Section        0  peripheral_gpio.o(.text.GIO_ClearAllIntStatus)
+    [Anonymous Symbol]                       0x02028278   Section        0  peripheral_gpio.o(.text.GIO_ConfigIntSource)
+    GIO_MaskedWrite                          0x02028345   Thumb Code    50  peripheral_gpio.o(.text.GIO_MaskedWrite)
+    [Anonymous Symbol]                       0x02028344   Section        0  peripheral_gpio.o(.text.GIO_MaskedWrite)
+    [Anonymous Symbol]                       0x02028378   Section        0  peripheral_gpio.o(.text.GIO_SetDirection)
+    [Anonymous Symbol]                       0x0202841c   Section        0  peripheral_pinctrl.o(.text.PINCTRL_SetPadMux)
+    [Anonymous Symbol]                       0x020285c4   Section        0  trace.o(.text.SEGGER_RTT_GetAvailWriteSpace)
+    [Anonymous Symbol]                       0x020285e8   Section        0  trace.o(.text.SEGGER_RTT_Init)
+    [Anonymous Symbol]                       0x020285f0   Section        0  trace.o(.text.SEGGER_RTT_Write)
+    [Anonymous Symbol]                       0x02028638   Section        0  trace.o(.text.SEGGER_RTT_WriteNoLock)
+    [Anonymous Symbol]                       0x020286e8   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate)
+    [Anonymous Symbol]                       0x02028700   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti)
+    SYSCTRL_ClkGateCtrl                      0x02028745   Thumb Code   902  peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl)
+    [Anonymous Symbol]                       0x02028744   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl)
+    [Anonymous Symbol]                       0x02028acc   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock)
+    [Anonymous Symbol]                       0x02028ae4   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock)
+    SYSCTRL_ResetBlockCtrl                   0x02028afd   Thumb Code   750  peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl)
+    [Anonymous Symbol]                       0x02028afc   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl)
+    [Anonymous Symbol]                       0x02028dec   Section        0  peripheral_timer.o(.text.TMR_WatchDogEnable3)
+    [Anonymous Symbol]                       0x02028fb4   Section        0  peripheral_timer.o(.text.TMR_WatchDogRestart)
+    [Anonymous Symbol]                       0x02028fd4   Section        0  peripheral_uart.o(.text.UART_SendData)
+    _DoInit                                  0x02028fe9   Thumb Code   156  trace.o(.text._DoInit)
+    [Anonymous Symbol]                       0x02028fe8   Section        0  trace.o(.text._DoInit)
+    _GetAvailWriteSpace                      0x02029085   Thumb Code    62  trace.o(.text._GetAvailWriteSpace)
+    [Anonymous Symbol]                       0x02029084   Section        0  trace.o(.text._GetAvailWriteSpace)
+    _WriteBlocking                           0x020290c5   Thumb Code   224  trace.o(.text._WriteBlocking)
+    [Anonymous Symbol]                       0x020290c4   Section        0  trace.o(.text._WriteBlocking)
+    _WriteNoCheck                            0x020291a5   Thumb Code   128  trace.o(.text._WriteNoCheck)
+    [Anonymous Symbol]                       0x020291a4   Section        0  trace.o(.text._WriteNoCheck)
+    [Anonymous Symbol]                       0x02029224   Section        0  peripheral_uart.o(.text.apUART_BaudRateSet)
+    [Anonymous Symbol]                       0x02029298   Section        0  peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL)
+    [Anonymous Symbol]                       0x020292a8   Section        0  peripheral_uart.o(.text.apUART_Initialize)
+    [Anonymous Symbol]                       0x02029340   Section        0  main.o(.text.app_main)
+    cb_assertion                             0x02029435   Thumb Code    30  main.o(.text.cb_assertion)
+    [Anonymous Symbol]                       0x02029434   Section        0  main.o(.text.cb_assertion)
+    cb_hard_fault                            0x02029455   Thumb Code    86  main.o(.text.cb_hard_fault)
+    [Anonymous Symbol]                       0x02029454   Section        0  main.o(.text.cb_hard_fault)
+    cb_heap_out_of_mem                       0x020294ad   Thumb Code    26  main.o(.text.cb_heap_out_of_mem)
+    [Anonymous Symbol]                       0x020294ac   Section        0  main.o(.text.cb_heap_out_of_mem)
+    [Anonymous Symbol]                       0x020294c8   Section        0  main.o(.text.cb_putc)
+    [Anonymous Symbol]                       0x020294fc   Section        0  trace.o(.text.cb_trace_rtt)
+    [Anonymous Symbol]                       0x0202957c   Section        0  main.o(.text.config_uart)
+    [Anonymous Symbol]                       0x020295d0   Section        0  main.o(.text.gpio_isr)
+    [Anonymous Symbol]                       0x020295e4   Section        0  main.o(.text.key_detector_start_calc)
+    map_int_mode                             0x02029601   Thumb Code   142  peripheral_gpio.o(.text.map_int_mode)
+    [Anonymous Symbol]                       0x02029600   Section        0  peripheral_gpio.o(.text.map_int_mode)
+    [Anonymous Symbol]                       0x02029690   Section        0  main.o(.text.on_deep_sleep_wakeup)
+    packet_schedule_task                     0x020296a5   Thumb Code   302  main.o(.text.packet_schedule_task)
+    [Anonymous Symbol]                       0x020296a4   Section        0  main.o(.text.packet_schedule_task)
+    [Anonymous Symbol]                       0x020297d4   Section        0  main.o(.text.query_deep_sleep_allowed)
+    set_reg_bit                              0x020297e1   Thumb Code    50  peripheral_sysctrl.o(.text.set_reg_bit)
+    [Anonymous Symbol]                       0x020297e0   Section        0  peripheral_sysctrl.o(.text.set_reg_bit)
+    set_reg_bits                             0x02029815   Thumb Code    68  peripheral_pinctrl.o(.text.set_reg_bits)
+    [Anonymous Symbol]                       0x02029814   Section        0  peripheral_pinctrl.o(.text.set_reg_bits)
+    [Anonymous Symbol]                       0x02029858   Section        0  main.o(.text.setup_peripherals)
+    source_id_on_pin                         0x0202990d   Thumb Code   160  peripheral_pinctrl.o(.text.source_id_on_pin)
+    [Anonymous Symbol]                       0x0202990c   Section        0  peripheral_pinctrl.o(.text.source_id_on_pin)
+    [Anonymous Symbol]                       0x020299ac   Section        0  trace.o(.text.trace_rtt_init)
+    watchdog_task                            0x020299bd   Thumb Code    22  main.o(.text.watchdog_task)
+    [Anonymous Symbol]                       0x020299bc   Section        0  main.o(.text.watchdog_task)
+    i.__scatterload_copy                     0x020299d2   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x020299e0   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x020299e2   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .L.str.7                                 0x02029d0e   Data          15  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x02029d0e   Section        0  main.o(.rodata.str1.1)
+    .L.str.8                                 0x02029d1d   Data          15  main.o(.rodata.str1.1)
+    .L.str.9                                 0x02029d2c   Data          15  main.o(.rodata.str1.1)
+    .L.str.10                                0x02029d3b   Data          15  main.o(.rodata.str1.1)
+    .L.str.5                                 0x02029d4a   Data          12  main.o(.rodata.str1.1)
+    .L.str.6                                 0x02029d56   Data          25  main.o(.rodata.str1.1)
+    .L.str.2                                 0x02029d6f   Data         108  main.o(.rodata.str1.1)
+    .L.str.4                                 0x02029ddb   Data          12  main.o(.rodata.str1.1)
+    .L.str.3                                 0x02029de7   Data          21  main.o(.rodata.str1.1)
+    .L.str.1                                 0x02029dfc   Data           2  main.o(.rodata.str1.1)
+    .L.str                                   0x02029dfe   Data           2  main.o(.rodata.str1.1)
+    .L.str                                   0x02029e00   Data          26  trace.o(.rodata.str1.1)
+    .L.str.8                                 0x02029e00   Data           7  trace.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x02029e00   Section        0  trace.o(.rodata.str1.1)
+    .L.str.7                                 0x02029e07   Data           4  trace.o(.rodata.str1.1)
+    .L.str.6                                 0x02029e0b   Data           9  trace.o(.rodata.str1.1)
+    .L.str.1                                 0x02029e1a   Data           6  trace.o(.rodata.str1.1)
+    .L.str.2                                 0x02029e20   Data          10  trace.o(.rodata.str1.1)
+    .L.str.3                                 0x02029e2a   Data          10  trace.o(.rodata.str1.1)
+    .L.str.4                                 0x02029e34   Data          10  trace.o(.rodata.str1.1)
+    .L.str.5                                 0x02029e3e   Data          10  trace.o(.rodata.str1.1)
+    _acDownBuffer                            0x20005570   Data          16  trace.o(.bss._acDownBuffer)
+    [Anonymous Symbol]                       0x20005570   Section        0  trace.o(.bss._acDownBuffer)
+    _acUpBuffer                              0x20005580   Data         500  trace.o(.bss._acUpBuffer)
+    [Anonymous Symbol]                       0x20005580   Section        0  trace.o(.bss._acUpBuffer)
+    sem_wakeup                               0x20005774   Data           4  main.o(.bss.sem_wakeup)
+    [Anonymous Symbol]                       0x20005774   Section        0  main.o(.bss.sem_wakeup)
+    STACK                                    0x20005780   Section        4  startup_ing91600.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    att_dispatch_client_can_send_now         0x02004379   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_client_request_can_send_now_event 0x0200437f   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_register_client             0x02004385   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_register_server             0x02004399   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_server_can_send_now         0x020043ad   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_server_request_can_send_now_event 0x020043b3   Thumb Code     0  symdefs.m ABSOLUTE
+    att_emit_general_event                   0x02004465   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_can_send_packet_now           0x02004b81   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_deferred_read_response        0x02004b85   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_get_mtu                       0x02004b9d   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_indicate                      0x02004c15   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_init                          0x02004c99   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_notify                        0x02004cd5   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_register_packet_handler       0x02004ded   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_request_can_send_now_event    0x02004df9   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_db                               0x02004e15   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_read_callback                    0x02004e29   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_write_callback                   0x02004e35   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_cmp                              0x0200501d   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_copy                             0x02005023   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_to_str                           0x0200502d   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_read_16                       0x02005065   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_read_32                       0x0200506d   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_store_16                      0x02005081   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_store_32                      0x0200508d   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_config                           0x02005209   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_create               0x02005347   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_free                 0x02005371   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_get                  0x020053d1   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_push_user_msg                    0x02005439   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_push_user_runnable               0x02005445   Thumb Code     0  symdefs.m ABSOLUTE
+    char_for_nibble                          0x020056e3   Thumb Code     0  symdefs.m ABSOLUTE
+    eTaskConfirmSleepModeStatus              0x02005a29   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_add_dev_to_periodic_list             0x020060bd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_add_whitelist                        0x020060d5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_aes_encrypt                          0x020060e9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clear_white_lists                    0x0200612d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clr_adv_set                          0x0200613d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clr_periodic_adv_list                0x0200614d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_create_connection_cancel             0x0200615d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_default_periodic_adv_sync_transfer_param 0x0200616d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_disconnect                           0x02006185   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_disconnect_all                       0x020061b1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_ext_create_connection                0x020061f1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_get_connection_parameter_range       0x020062e1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_le_read_channel_map                  0x0200631d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_create_sync             0x02006391   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_create_sync_cancel      0x020063b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_set_info_transfer       0x020063c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_sync_transfer           0x020063dd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_sync_transfer_param     0x020063f5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_term_sync               0x02006411   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_antenna_info                    0x020064a5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_periodic_adv_list_size          0x020064b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_phy                             0x020064c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_remote_used_features            0x020064d9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_remote_version                  0x020064ed   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_rssi                            0x02006501   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_remove_whitelist                     0x02006515   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rmv_adv_set                          0x02006599   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rmv_dev_from_periodic_list           0x020065ad   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rx_test_v2                           0x020065c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rx_test_v3                           0x020065dd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_adv_set_random_addr              0x0200662d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_request_enable    0x02006679   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_response_enable   0x02006695   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_rx_param          0x020066a9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_tx_param          0x02006705   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_parameter_range       0x02006759   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_cte_tx_enable     0x02006771   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_cte_tx_param      0x02006785   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_iq_sampling_enable 0x020067e5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_data_length                      0x02006849   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_def_phy                          0x02006865   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_data                     0x0200687d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_enable                   0x02006895   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_para                     0x02006911   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_enable                  0x020069e9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_para                    0x02006a01   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_response_data           0x02006aa9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_host_channel_classification      0x02006ac1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_data                0x02006ad5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_enable              0x02006b49   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_para                0x02006b5d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_rx_enable           0x02006b75   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_phy                              0x02006b89   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_random_device_address            0x02006ba5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_start_ccm                            0x02006bd5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_test_end                             0x02006c09   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_tx_test_v2                           0x02006c19   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_tx_test_v4                           0x02006c31   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_update_connection_parameters         0x02006c59   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_vendor_tx_continuous_wave            0x02006c9d   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_cancel_write                 0x020071c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristic_descriptors 0x020071eb   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_handle_range_by_uuid128 0x0200722b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_handle_range_by_uuid16 0x0200727b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_service 0x020072cb   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services    0x02007301   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services_by_uuid128 0x02007333   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services_by_uuid16 0x02007377   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_execute_write                0x020073b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_find_included_services_for_service 0x020073db   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_get_mtu                      0x02007409   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_is_ready                     0x020074cd   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_listen_for_characteristic_value_updates 0x020074e3   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_prepare_write                0x02007505   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_characteristic_descriptor_using_descriptor_handle 0x02007541   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_characteristic_descriptor_using_descriptor_handle 0x0200756b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_characteristic_descriptor_using_descriptor_handle_with_offset 0x02007571   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_value_of_characteristic_using_value_handle 0x0200759f   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_value_of_characteristic_using_value_handle_with_offset 0x020075a5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_multiple_characteristic_values 0x020075d3   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristic_using_value_handle 0x02007603   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristics_by_uuid128 0x02007631   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristics_by_uuid16 0x0200767d   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_register_handler             0x020076c9   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_reliable_write_long_value_of_characteristic 0x020076d5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_signed_write_without_response 0x02007b09   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_characteristic_descriptor_using_descriptor_handle 0x02007bcd   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_client_characteristic_configuration 0x02007c07   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_characteristic_descriptor_using_descriptor_handle 0x02007c59   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_characteristic_descriptor_using_descriptor_handle_with_offset 0x02007c69   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_value_of_characteristic 0x02007ca5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_value_of_characteristic_with_offset 0x02007cb5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_value_of_characteristic 0x02007cf1   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_value_of_characteristic_without_response 0x02007d27   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_add_event_handler                    0x0200931d   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_power_control                        0x02009b1d   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_register_acl_packet_handler          0x02009cd1   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_commit                                0x0200a201   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_get                                   0x0200a259   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_init                                  0x0200a271   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_put                                   0x0200a2d9   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_remove                                0x0200a351   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_remove_all                            0x0200a38d   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_value_modified                        0x0200a3d1   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_visit                                 0x0200a3d5   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_add_event_handler                  0x0200a489   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_can_send_packet_now                0x0200a499   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_create_le_credit_based_connection_request 0x0200a65d   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_credit_based_send                  0x0200a7a5   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_credit_based_send_continue         0x0200a7d1   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_disconnect                         0x0200a84d   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_get_le_credit_based_connection_credits 0x0200aa39   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_get_peer_mtu_for_local_cid         0x0200aa55   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_init                               0x0200ae95   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_le_send_flow_control_credit        0x0200af8b   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_max_le_mtu                         0x0200b299   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_register_packet_handler            0x0200b3c1   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_register_service                   0x0200b3cd   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_request_can_send_now_event         0x0200b4dd   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_request_connection_parameter_update 0x0200b4f7   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_send_echo_request                  0x0200b9d9   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_unregister_service                 0x0200bab9   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_add                         0x0200bb11   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_find                        0x0200bbe5   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_from_key                    0x0200bc11   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_cur                    0x0200bc19   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_cur_key                0x0200bc1d   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_init                   0x0200bc21   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_next                   0x0200bc29   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_remove_key                  0x0200bc4f   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_adjust_conn_peer_tx_power             0x0200bc7d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_free                                  0x0200bca9   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_hint_on_ce_len                        0x0200bcb5   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_legacy_adv_set_interval               0x0200bced   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_malloc                                0x0200bcfd   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_scan_set_fixed_channel                0x0200be6d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_adv_access_address                0x0200bf81   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_adv_coded_scheme                  0x0200bf8d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_coded_scheme                 0x0200bfc5   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_latency                      0x0200bff1   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_tx_power                     0x0200c021   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_def_antenna                       0x0200c05d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_initiating_coded_scheme           0x0200c07d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_max_conn_number                   0x0200c089   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_tx_power_range                    0x0200c125   Thumb Code     0  symdefs.m ABSOLUTE
+    nibble_for_char                          0x0201e881   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_32k_rc_auto_tune                0x0201e92d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_32k_rc_tune                     0x0201e979   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_calibrate_32k                   0x0201e995   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_config                          0x0201e999   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_current_task                0x0201ea69   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_gen_os_driver               0x0201ea8d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_heap_status                 0x0201ea95   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_task_handle                 0x0201eaad   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_us_time                     0x0201eacd   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_version                     0x0201ead1   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_hrng                            0x0201ead9   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_install_isr_stack               0x0201eae1   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_install_task_stack              0x0201eaed   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_patch_rf_init_data              0x0201eb25   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_printf                          0x0201eb31   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_raise_assertion                 0x0201eb45   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_rand                            0x0201eb59   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_read_info                       0x0201eb5d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_read_persistent_reg             0x0201eb8d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_reset                           0x0201eb99   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_evt_callback                0x0201ebad   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_irq_callback                0x0201ebc1   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_clk_source               0x0201ebf9   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_init_data                0x0201ec05   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_power_mapping            0x0201ec11   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_timer                       0x0201ec1d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_shutdown                        0x0201ec21   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_switch_app                      0x0201ec25   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_trace_raw                       0x0201ec3d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_write_persistent_reg            0x0201ec55   Thumb Code     0  symdefs.m ABSOLUTE
+    printf_hexdump                           0x0201ee0d   Thumb Code     0  symdefs.m ABSOLUTE
+    pvPortMalloc                             0x0201f901   Thumb Code     0  symdefs.m ABSOLUTE
+    pvTaskIncrementMutexHeldCount            0x0201f9e9   Thumb Code     0  symdefs.m ABSOLUTE
+    pvTimerGetTimerID                        0x0201fa01   Thumb Code     0  symdefs.m ABSOLUTE
+    pxPortInitialiseStack                    0x0201fa2d   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_128                              0x0201fc15   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_24                               0x0201fc1b   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_48                               0x0201fc21   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_56                               0x0201fc27   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_64                               0x0201fc2d   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_bd_addr                          0x0201fc33   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_bytes                            0x0201fc39   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_add_event_handler                     0x0201ff55   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_address_resolution_lookup             0x020200ad   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authenticated                         0x0202040d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_decline                 0x0202041b   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_grant                   0x0202043b   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_state                   0x0202045b   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_bonding_decline                       0x02020475   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_config                                0x0202088d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_config_conn                           0x020208a5   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_encryption_key_size                   0x02020a5b   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_just_works_confirm                    0x02020f95   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_le_device_key                         0x020212d1   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_passkey_input                         0x02021367   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_get 0x02021715   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_get_mode 0x0202171d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_set_mode 0x02021729   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_set_update_period 0x02021751   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_register_oob_data_callback            0x0202188d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_request_pairing                       0x02021899   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_send_security_request                 0x020222d7   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_accepted_stk_generation_methods   0x020222fd   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_authentication_requirements       0x02022309   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_encryption_key_size_range         0x02022315   Thumb Code     0  symdefs.m ABSOLUTE
+    sscanf_bd_addr                           0x02022675   Thumb Code     0  symdefs.m ABSOLUTE
+    sysSetPublicDeviceAddr                   0x02022a3d   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid128_to_str                           0x02023181   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid_add_bluetooth_prefix                0x020231d9   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid_has_bluetooth_prefix                0x020231f9   Thumb Code     0  symdefs.m ABSOLUTE
+    uxListRemove                             0x02023215   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueMessagesWaiting                   0x0202323d   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueMessagesWaitingFromISR            0x02023265   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueSpacesAvailable                   0x02023281   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskGetStackHighWaterMark              0x020232ad   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskPriorityGet                        0x020232cd   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskPriorityGetFromISR                 0x020232e9   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInitialise                          0x02023387   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInitialiseItem                      0x0202339d   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInsert                              0x020233a3   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInsertEnd                           0x020233d3   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortEndScheduler                        0x020233ed   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortEnterCritical                       0x02023419   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortExitCritical                        0x0202345d   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortFree                                0x02023491   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortSuppressTicksAndSleep               0x02023535   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortValidateInterruptPriority           0x0202363d   Thumb Code     0  symdefs.m ABSOLUTE
+    vQueueDelete                             0x02023699   Thumb Code     0  symdefs.m ABSOLUTE
+    vQueueWaitForMessageRestricted           0x020236c5   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskDelay                               0x02023709   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskInternalSetTimeOutState             0x02023755   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskMissedYield                         0x02023765   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPlaceOnEventList                    0x02023771   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPlaceOnEventListRestricted          0x020237a9   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPriorityDisinheritAfterTimeout      0x020237e9   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPrioritySet                         0x02023895   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskResume                              0x0202395d   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskStartScheduler                      0x020239e1   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskStepTick                            0x02023a71   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSuspend                             0x02023aa1   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSuspendAll                          0x02023b5d   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSwitchContext                       0x02023b6d   Thumb Code     0  symdefs.m ABSOLUTE
+    xPortStartScheduler                      0x02023c15   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueAddToSet                           0x02023d15   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateCountingSemaphore            0x02023d39   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateCountingSemaphoreStatic      0x02023d75   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateMutex                        0x02023db9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateMutexStatic                  0x02023dcf   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateSet                          0x02023de9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericCreate                      0x02023df1   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericCreateStatic                0x02023e3d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericReset                       0x02023ea5   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericSend                        0x02023f31   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericSendFromISR                 0x0202409d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGiveFromISR                        0x0202415d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGiveMutexRecursive                 0x02024201   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueIsQueueEmptyFromISR                0x02024241   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueIsQueueFullFromISR                 0x02024265   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueuePeek                               0x0202428d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueuePeekFromISR                        0x020243b5   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueReceive                            0x02024421   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueReceiveFromISR                     0x0202454d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueRemoveFromSet                      0x020245e1   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSelectFromSet                      0x02024603   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSelectFromSetFromISR               0x02024615   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSemaphoreTake                      0x02024629   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueTakeMutexRecursive                 0x02024795   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCheckForTimeOut                     0x020247d9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCreate                              0x02024849   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCreateStatic                        0x020248a5   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetCurrentTaskHandle                0x02024915   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetSchedulerState                   0x02024921   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetTickCount                        0x0202493d   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetTickCountFromISR                 0x02024949   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskIncrementTick                       0x02024959   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskPriorityDisinherit                  0x02024a25   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskPriorityInherit                     0x02024ab9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskRemoveFromEventList                 0x02024b4d   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskResumeAll                           0x02024bcd   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskResumeFromISR                       0x02024c95   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreate                             0x02024d21   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreateStatic                       0x02024d55   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreateTimerTask                    0x02024d8d   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGenericCommand                     0x02024df9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGetExpiryTime                      0x02024e69   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGetTimerDaemonTaskHandle           0x02024e89   Thumb Code     0  symdefs.m ABSOLUTE
+    __Vectors                                0x02028000   Data           4  startup_ing91600.o(RESET)
+    __main                                   0x02028009   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x02028009   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0202800d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x02028011   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x02028011   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x02028011   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x02028011   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x02028019   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x02028019   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x0202801d   Thumb Code    14  startup_ing91600.o(.text)
+    main                                     0x0202802d   Thumb Code    14  startup_ing91600.o(.text)
+    __scatterload                            0x02028045   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x02028045   Thumb Code     0  init.o(.text)
+    __aeabi_uldivmod                         0x02028069   Thumb Code    98  uldiv.o(.text)
+    __aeabi_memcpy                           0x020280cb   Thumb Code    36  memcpya.o(.text)
+    __aeabi_memcpy4                          0x020280cb   Thumb Code     0  memcpya.o(.text)
+    __aeabi_memcpy8                          0x020280cb   Thumb Code     0  memcpya.o(.text)
+    strcpy                                   0x020280ef   Thumb Code    18  strcpy.o(.text)
+    __aeabi_llsl                             0x02028101   Thumb Code    30  llshl.o(.text)
+    _ll_shift_l                              0x02028101   Thumb Code     0  llshl.o(.text)
+    __aeabi_llsr                             0x0202811f   Thumb Code    32  llushr.o(.text)
+    _ll_ushift_r                             0x0202811f   Thumb Code     0  llushr.o(.text)
+    EFUSE_GetDataValidFlag                   0x02028141   Thumb Code    16  peripheral_efuse.o(.text.EFUSE_GetDataValidFlag)
+    EFUSE_GetEfuseData                       0x02028151   Thumb Code    44  peripheral_efuse.o(.text.EFUSE_GetEfuseData)
+    EFUSE_GetStatusBusy                      0x0202817d   Thumb Code    16  peripheral_efuse.o(.text.EFUSE_GetStatusBusy)
+    EFUSE_Lock                               0x0202818d   Thumb Code    18  peripheral_efuse.o(.text.EFUSE_Lock)
+    EFUSE_SetRdFlag                          0x020281a1   Thumb Code    18  peripheral_efuse.o(.text.EFUSE_SetRdFlag)
+    EFUSE_UnLock                             0x020281b5   Thumb Code    36  peripheral_efuse.o(.text.EFUSE_UnLock)
+    EFUSE_WriteEfuseDataWord                 0x020281d9   Thumb Code   132  peripheral_efuse.o(.text.EFUSE_WriteEfuseDataWord)
+    GIO_ClearAllIntStatus                    0x0202825d   Thumb Code    26  peripheral_gpio.o(.text.GIO_ClearAllIntStatus)
+    GIO_ConfigIntSource                      0x02028279   Thumb Code   202  peripheral_gpio.o(.text.GIO_ConfigIntSource)
+    GIO_SetDirection                         0x02028379   Thumb Code   162  peripheral_gpio.o(.text.GIO_SetDirection)
+    PINCTRL_SetPadMux                        0x0202841d   Thumb Code   422  peripheral_pinctrl.o(.text.PINCTRL_SetPadMux)
+    SEGGER_RTT_GetAvailWriteSpace            0x020285c5   Thumb Code    34  trace.o(.text.SEGGER_RTT_GetAvailWriteSpace)
+    SEGGER_RTT_Init                          0x020285e9   Thumb Code     8  trace.o(.text.SEGGER_RTT_Init)
+    SEGGER_RTT_Write                         0x020285f1   Thumb Code    72  trace.o(.text.SEGGER_RTT_Write)
+    SEGGER_RTT_WriteNoLock                   0x02028639   Thumb Code   176  trace.o(.text.SEGGER_RTT_WriteNoLock)
+    SYSCTRL_ClearClkGate                     0x020286e9   Thumb Code    22  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate)
+    SYSCTRL_ClearClkGateMulti                0x02028701   Thumb Code    66  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti)
+    SYSCTRL_ReleaseBlock                     0x02028acd   Thumb Code    22  peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock)
+    SYSCTRL_ResetBlock                       0x02028ae5   Thumb Code    22  peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock)
+    TMR_WatchDogEnable3                      0x02028ded   Thumb Code   456  peripheral_timer.o(.text.TMR_WatchDogEnable3)
+    TMR_WatchDogRestart                      0x02028fb5   Thumb Code    30  peripheral_timer.o(.text.TMR_WatchDogRestart)
+    UART_SendData                            0x02028fd5   Thumb Code    20  peripheral_uart.o(.text.UART_SendData)
+    apUART_BaudRateSet                       0x02029225   Thumb Code   116  peripheral_uart.o(.text.apUART_BaudRateSet)
+    apUART_Check_TXFIFO_FULL                 0x02029299   Thumb Code    16  peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL)
+    apUART_Initialize                        0x020292a9   Thumb Code   152  peripheral_uart.o(.text.apUART_Initialize)
+    app_main                                 0x02029341   Thumb Code   244  main.o(.text.app_main)
+    cb_putc                                  0x020294c9   Thumb Code    52  main.o(.text.cb_putc)
+    cb_trace_rtt                             0x020294fd   Thumb Code   126  trace.o(.text.cb_trace_rtt)
+    config_uart                              0x0202957d   Thumb Code    84  main.o(.text.config_uart)
+    gpio_isr                                 0x020295d1   Thumb Code    20  main.o(.text.gpio_isr)
+    key_detector_start_calc                  0x020295e5   Thumb Code    28  main.o(.text.key_detector_start_calc)
+    on_deep_sleep_wakeup                     0x02029691   Thumb Code    18  main.o(.text.on_deep_sleep_wakeup)
+    query_deep_sleep_allowed                 0x020297d5   Thumb Code    12  main.o(.text.query_deep_sleep_allowed)
+    setup_peripherals                        0x02029859   Thumb Code   178  main.o(.text.setup_peripherals)
+    trace_rtt_init                           0x020299ad   Thumb Code    14  trace.o(.text.trace_rtt_init)
+    __scatterload_copy                       0x020299d3   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x020299e1   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x020299e3   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    io_output_source_map                     0x020299f0   Data         798  peripheral_pinctrl.o(.rodata.io_output_source_map)
+    Region$$Table$$Base                      0x02029e14   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x02029e24   Number         0  anon$$obj.o(Region$$Table)
+    _SEGGER_RTT                              0x20005528   Data          72  trace.o(.bss._SEGGER_RTT)
+    trace_ctx                                0x20005778   Data           1  main.o(.bss.trace_ctx)
+    __initial_sp                             0x20005784   Data           0  startup_ing91600.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x02028009
+
+  Load Region LR_IROM1 (Base: 0x02028000, Size: 0x00001e24, Max: 0x00058000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x02028000, Load base: 0x02028000, Size: 0x00001e24, Max: 0x00058000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x02028000   0x02028000   0x00000008   Data   RO           77    RESET               startup_ing91600.o
+    0x02028008   0x02028008   0x00000000   Code   RO          569  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x02028008   0x02028008   0x00000004   Code   RO          620    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0202800c   0x0202800c   0x00000004   Code   RO          623    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x02028010   0x02028010   0x00000000   Code   RO          625    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x02028010   0x02028010   0x00000000   Code   RO          627    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x02028010   0x02028010   0x00000008   Code   RO          628    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x02028018   0x02028018   0x00000000   Code   RO          630    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x02028018   0x02028018   0x00000000   Code   RO          632    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x02028018   0x02028018   0x00000004   Code   RO          621    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0202801c   0x0202801c   0x00000028   Code   RO           78    .text               startup_ing91600.o
+    0x02028044   0x02028044   0x00000024   Code   RO          570    .text               mc_w.l(init.o)
+    0x02028068   0x02028068   0x00000062   Code   RO          574    .text               mc_w.l(uldiv.o)
+    0x020280ca   0x020280ca   0x00000024   Code   RO          576    .text               mc_w.l(memcpya.o)
+    0x020280ee   0x020280ee   0x00000012   Code   RO          580    .text               mc_w.l(strcpy.o)
+    0x02028100   0x02028100   0x0000001e   Code   RO          646    .text               mc_w.l(llshl.o)
+    0x0202811e   0x0202811e   0x00000020   Code   RO          648    .text               mc_w.l(llushr.o)
+    0x0202813e   0x0202813e   0x00000002   PAD
+    0x02028140   0x02028140   0x00000010   Code   RO          408    .text.EFUSE_GetDataValidFlag  peripheral_efuse.o
+    0x02028150   0x02028150   0x0000002c   Code   RO          412    .text.EFUSE_GetEfuseData  peripheral_efuse.o
+    0x0202817c   0x0202817c   0x00000010   Code   RO          404    .text.EFUSE_GetStatusBusy  peripheral_efuse.o
+    0x0202818c   0x0202818c   0x00000012   Code   RO          418    .text.EFUSE_Lock    peripheral_efuse.o
+    0x0202819e   0x0202819e   0x00000002   PAD
+    0x020281a0   0x020281a0   0x00000012   Code   RO          410    .text.EFUSE_SetRdFlag  peripheral_efuse.o
+    0x020281b2   0x020281b2   0x00000002   PAD
+    0x020281b4   0x020281b4   0x00000024   Code   RO          416    .text.EFUSE_UnLock  peripheral_efuse.o
+    0x020281d8   0x020281d8   0x00000084   Code   RO          420    .text.EFUSE_WriteEfuseDataWord  peripheral_efuse.o
+    0x0202825c   0x0202825c   0x0000001a   Code   RO          379    .text.GIO_ClearAllIntStatus  peripheral_gpio.o
+    0x02028276   0x02028276   0x00000002   PAD
+    0x02028278   0x02028278   0x000000ca   Code   RO          361    .text.GIO_ConfigIntSource  peripheral_gpio.o
+    0x02028342   0x02028342   0x00000002   PAD
+    0x02028344   0x02028344   0x00000032   Code   RO          353    .text.GIO_MaskedWrite  peripheral_gpio.o
+    0x02028376   0x02028376   0x00000002   PAD
+    0x02028378   0x02028378   0x000000a2   Code   RO          351    .text.GIO_SetDirection  peripheral_gpio.o
+    0x0202841a   0x0202841a   0x00000002   PAD
+    0x0202841c   0x0202841c   0x000001a6   Code   RO          148    .text.PINCTRL_SetPadMux  peripheral_pinctrl.o
+    0x020285c2   0x020285c2   0x00000002   PAD
+    0x020285c4   0x020285c4   0x00000022   Code   RO          497    .text.SEGGER_RTT_GetAvailWriteSpace  trace.o
+    0x020285e6   0x020285e6   0x00000002   PAD
+    0x020285e8   0x020285e8   0x00000008   Code   RO          489    .text.SEGGER_RTT_Init  trace.o
+    0x020285f0   0x020285f0   0x00000048   Code   RO          453    .text.SEGGER_RTT_Write  trace.o
+    0x02028638   0x02028638   0x000000b0   Code   RO          449    .text.SEGGER_RTT_WriteNoLock  trace.o
+    0x020286e8   0x020286e8   0x00000016   Code   RO          207    .text.SYSCTRL_ClearClkGate  peripheral_sysctrl.o
+    0x020286fe   0x020286fe   0x00000002   PAD
+    0x02028700   0x02028700   0x00000042   Code   RO          211    .text.SYSCTRL_ClearClkGateMulti  peripheral_sysctrl.o
+    0x02028742   0x02028742   0x00000002   PAD
+    0x02028744   0x02028744   0x00000386   Code   RO          205    .text.SYSCTRL_ClkGateCtrl  peripheral_sysctrl.o
+    0x02028aca   0x02028aca   0x00000002   PAD
+    0x02028acc   0x02028acc   0x00000016   Code   RO          217    .text.SYSCTRL_ReleaseBlock  peripheral_sysctrl.o
+    0x02028ae2   0x02028ae2   0x00000002   PAD
+    0x02028ae4   0x02028ae4   0x00000016   Code   RO          213    .text.SYSCTRL_ResetBlock  peripheral_sysctrl.o
+    0x02028afa   0x02028afa   0x00000002   PAD
+    0x02028afc   0x02028afc   0x000002ee   Code   RO          215    .text.SYSCTRL_ResetBlockCtrl  peripheral_sysctrl.o
+    0x02028dea   0x02028dea   0x00000002   PAD
+    0x02028dec   0x02028dec   0x000001c8   Code   RO          336    .text.TMR_WatchDogEnable3  peripheral_timer.o
+    0x02028fb4   0x02028fb4   0x0000001e   Code   RO          340    .text.TMR_WatchDogRestart  peripheral_timer.o
+    0x02028fd2   0x02028fd2   0x00000002   PAD
+    0x02028fd4   0x02028fd4   0x00000014   Code   RO          131    .text.UART_SendData  peripheral_uart.o
+    0x02028fe8   0x02028fe8   0x0000009c   Code   RO          431    .text._DoInit       trace.o
+    0x02029084   0x02029084   0x0000003e   Code   RO          443    .text._GetAvailWriteSpace  trace.o
+    0x020290c2   0x020290c2   0x00000002   PAD
+    0x020290c4   0x020290c4   0x000000e0   Code   RO          447    .text._WriteBlocking  trace.o
+    0x020291a4   0x020291a4   0x00000080   Code   RO          445    .text._WriteNoCheck  trace.o
+    0x02029224   0x02029224   0x00000074   Code   RO           85    .text.apUART_BaudRateSet  peripheral_uart.o
+    0x02029298   0x02029298   0x00000010   Code   RO           97    .text.apUART_Check_TXFIFO_FULL  peripheral_uart.o
+    0x020292a8   0x020292a8   0x00000098   Code   RO          129    .text.apUART_Initialize  peripheral_uart.o
+    0x02029340   0x02029340   0x000000f4   Code   RO           18    .text.app_main      main.o
+    0x02029434   0x02029434   0x0000001e   Code   RO           22    .text.cb_assertion  main.o
+    0x02029452   0x02029452   0x00000002   PAD
+    0x02029454   0x02029454   0x00000056   Code   RO           20    .text.cb_hard_fault  main.o
+    0x020294aa   0x020294aa   0x00000002   PAD
+    0x020294ac   0x020294ac   0x0000001a   Code   RO           24    .text.cb_heap_out_of_mem  main.o
+    0x020294c6   0x020294c6   0x00000002   PAD
+    0x020294c8   0x020294c8   0x00000034   Code   RO            2    .text.cb_putc       main.o
+    0x020294fc   0x020294fc   0x0000007e   Code   RO          509    .text.cb_trace_rtt  trace.o
+    0x0202957a   0x0202957a   0x00000002   PAD
+    0x0202957c   0x0202957c   0x00000054   Code   RO            6    .text.config_uart   main.o
+    0x020295d0   0x020295d0   0x00000014   Code   RO            8    .text.gpio_isr      main.o
+    0x020295e4   0x020295e4   0x0000001c   Code   RO           10    .text.key_detector_start_calc  main.o
+    0x02029600   0x02029600   0x0000008e   Code   RO          363    .text.map_int_mode  peripheral_gpio.o
+    0x0202968e   0x0202968e   0x00000002   PAD
+    0x02029690   0x02029690   0x00000012   Code   RO           14    .text.on_deep_sleep_wakeup  main.o
+    0x020296a2   0x020296a2   0x00000002   PAD
+    0x020296a4   0x020296a4   0x0000012e   Code   RO           28    .text.packet_schedule_task  main.o
+    0x020297d2   0x020297d2   0x00000002   PAD
+    0x020297d4   0x020297d4   0x0000000c   Code   RO           16    .text.query_deep_sleep_allowed  main.o
+    0x020297e0   0x020297e0   0x00000032   Code   RO          221    .text.set_reg_bit   peripheral_sysctrl.o
+    0x02029812   0x02029812   0x00000002   PAD
+    0x02029814   0x02029814   0x00000044   Code   RO          178    .text.set_reg_bits  peripheral_pinctrl.o
+    0x02029858   0x02029858   0x000000b2   Code   RO           12    .text.setup_peripherals  main.o
+    0x0202990a   0x0202990a   0x00000002   PAD
+    0x0202990c   0x0202990c   0x000000a0   Code   RO          176    .text.source_id_on_pin  peripheral_pinctrl.o
+    0x020299ac   0x020299ac   0x0000000e   Code   RO          523    .text.trace_rtt_init  trace.o
+    0x020299ba   0x020299ba   0x00000002   PAD
+    0x020299bc   0x020299bc   0x00000016   Code   RO           26    .text.watchdog_task  main.o
+    0x020299d2   0x020299d2   0x0000000e   Code   RO          665    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x020299e0   0x020299e0   0x00000002   Code   RO          666    i.__scatterload_null  mc_w.l(handlers.o)
+    0x020299e2   0x020299e2   0x0000000e   Code   RO          667    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x020299f0   0x020299f0   0x0000031e   Data   RO          192    .rodata.io_output_source_map  peripheral_pinctrl.o
+    0x02029d0e   0x02029d0e   0x000000f2   Data   RO           32    .rodata.str1.1      main.o
+    0x02029e00   0x02029e00   0x00000014   Data   RO          558    .rodata.str1.1      trace.o
+    0x02029e14   0x02029e14   0x00000010   Data   RO          664    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20005528, Load base: 0x02029e24, Size: 0x0000025c, Max: 0x00002ad8, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20005528        -       0x00000048   Zero   RW          555    .bss._SEGGER_RTT    trace.o
+    0x20005570        -       0x00000010   Zero   RW          562    .bss._acDownBuffer  trace.o
+    0x20005580        -       0x000001f4   Zero   RW          561    .bss._acUpBuffer    trace.o
+    0x20005774        -       0x00000004   Zero   RW           31    .bss.sem_wakeup     main.o
+    0x20005778        -       0x00000001   Zero   RW           30    .bss.trace_ctx      main.o
+    0x20005779   0x02029e24   0x00000007   PAD
+    0x20005780        -       0x00000004   Zero   RW           75    STACK               startup_ing91600.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1102          0        242          0          5      14314   main.o
+       280          4          0          0          0       2704   peripheral_efuse.o
+       582          0          0          0          0       6889   peripheral_gpio.o
+       650          0        798          0          0      13526   peripheral_pinctrl.o
+      1834         96          0          0          0      14344   peripheral_sysctrl.o
+       486          0          0          0          0       4144   peripheral_timer.o
+       304          0          0          0          0       5788   peripheral_uart.o
+        40         12          8          0          4        424   startup_ing91600.o
+      1000          0         20          0        588      22230   trace.o
+
+    ----------------------------------------------------------------------
+      6330        112       1084          0        604      84363   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+        52          0          0          0          7          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        30          0          0          0          0         68   llshl.o
+        32          0          0          0          0         68   llushr.o
+        36          0          0          0          0         68   memcpya.o
+        18          0          0          0          0         68   strcpy.o
+        98          0          0          0          0         92   uldiv.o
+
+    ----------------------------------------------------------------------
+       302         16          0          0          0        432   Library Totals
+         2          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       300         16          0          0          0        432   mc_w.l
+
+    ----------------------------------------------------------------------
+       302         16          0          0          0        432   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      6632        128       1084          0        604      84703   Grand Totals
+      6632        128       1084          0        604      84703   ELF Image Totals
+      6632        128       1084          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 7716 (   7.54kB)
+    Total RW  Size (RW Data + ZI Data)               604 (   0.59kB)
+    Total ROM Size (Code + RO Data + RW Data)       7716 (   7.54kB)
+
+==============================================================================
+

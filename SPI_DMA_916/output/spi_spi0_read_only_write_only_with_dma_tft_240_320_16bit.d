@@ -1,0 +1,2 @@
+./output/spi_spi0_read_only_write_only_with_dma_tft_240_320_16bit.o: \
+  src\spi_spi0_read_only_write_only_with_dma_tft_240_320_16bit.c

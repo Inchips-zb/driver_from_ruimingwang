@@ -1,0 +1,1634 @@
+Component: ARM Compiler 6.16 Tool: armlink [5dfeaa00]
+
+==============================================================================
+
+Section Cross References
+
+    main.o(.text.cb_putc) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for apUART_Check_TXFIFO_FULL
+    main.o(.text.cb_putc) refers to peripheral_uart.o(.text.UART_SendData) for UART_SendData
+    main.o(.ARM.exidx.text.cb_putc) refers to main.o(.text.cb_putc) for [Anonymous Symbol]
+    main.o(.text.fputc) refers to main.o(.text.cb_putc) for cb_putc
+    main.o(.ARM.exidx.text.fputc) refers to main.o(.text.fputc) for [Anonymous Symbol]
+    main.o(.text.config_uart) refers to peripheral_uart.o(.text.apUART_Initialize) for apUART_Initialize
+    main.o(.ARM.exidx.text.config_uart) refers to main.o(.text.config_uart) for [Anonymous Symbol]
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) for SYSCTRL_ClearClkGateMulti
+    main.o(.text.setup_peripherals) refers to main.o(.text.config_uart) for config_uart
+    main.o(.text.setup_peripherals) refers to peripheral_timer.o(.text.TMR_WatchDogEnable3) for TMR_WatchDogEnable3
+    main.o(.text.setup_peripherals) refers to bsp_usb.o(.text.bsp_usb_init) for bsp_usb_init
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for SYSCTRL_GetHClk
+    main.o(.text.setup_peripherals) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetClk) for SYSCTRL_GetClk
+    main.o(.ARM.exidx.text.setup_peripherals) refers to main.o(.text.setup_peripherals) for [Anonymous Symbol]
+    main.o(.text.app_main) refers to main.o(.text.cb_hard_fault) for cb_hard_fault
+    main.o(.text.app_main) refers to main.o(.text.cb_assertion) for cb_assertion
+    main.o(.text.app_main) refers to main.o(.text.cb_heap_out_of_mem) for cb_heap_out_of_mem
+    main.o(.text.app_main) refers to main.o(.text.cb_putc) for cb_putc
+    main.o(.text.app_main) refers to main.o(.text.setup_peripherals) for setup_peripherals
+    main.o(.text.app_main) refers to main.o(.text.watchdog_task) for watchdog_task
+    main.o(.ARM.exidx.text.app_main) refers to main.o(.text.app_main) for [Anonymous Symbol]
+    main.o(.text.cb_hard_fault) refers to main.o(.rodata.str1.1) for .L.str.2
+    main.o(.ARM.exidx.text.cb_hard_fault) refers to main.o(.text.cb_hard_fault) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.cb_assertion) refers to main.o(.text.cb_assertion) for [Anonymous Symbol]
+    main.o(.ARM.exidx.text.cb_heap_out_of_mem) refers to main.o(.text.cb_heap_out_of_mem) for [Anonymous Symbol]
+    main.o(.text.watchdog_task) refers to peripheral_timer.o(.text.TMR_WatchDogRestart) for TMR_WatchDogRestart
+    main.o(.ARM.exidx.text.watchdog_task) refers to main.o(.text.watchdog_task) for [Anonymous Symbol]
+    startup_ing91600.o(RESET) refers to startup_ing91600.o(.text) for Reset_Handler
+    startup_ing91600.o(.text) refers to init.o(.text) for __scatterload
+    startup_ing91600.o(.text) refers to main.o(.text.app_main) for app_main
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) for SYSCTRL_ClearClkGateMulti
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) for SYSCTRL_SelectUSBClk
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_usb.o(.text.USB_IrqHandler) for USB_IrqHandler
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUSB) for PINCTRL_SelUSB
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig) for SYSCTRL_USBPhyConfig
+    bsp_usb.o(.text.bsp_usb_init) refers to bsp_usb.o(.text.bsp_usb_event_handler) for bsp_usb_event_handler
+    bsp_usb.o(.text.bsp_usb_init) refers to peripheral_usb.o(.text.USB_InitConfig) for USB_InitConfig
+    bsp_usb.o(.ARM.exidx.text.bsp_usb_init) refers to bsp_usb.o(.text.bsp_usb_init) for [Anonymous Symbol]
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to peripheral_usb.o(.text.USB_GetEp0SetupData) for USB_GetEp0SetupData
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.bss.DynamicDescriptor) for DynamicDescriptor
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.bss.DataRecvBuf) for DataRecvBuf
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.bss.DataSendBuf) for DataSendBuf
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to memseta.o(.text) for __aeabi_memset4
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to peripheral_usb.o(.text.USB_SendData) for USB_SendData
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to peripheral_usb.o(.text.USB_RecvData) for USB_RecvData
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.WcidDescriptor_5) for WcidDescriptor_5
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.bss.UsbVar) for UsbVar
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.DeviceDescriptor) for DeviceDescriptor
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.ConfigDescriptor) for ConfigDescriptor
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to peripheral_usb.o(.text.USB_ConfigureEp) for USB_ConfigureEp
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.WcidDescriptor_4) for WcidDescriptor_4
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.StringDescriptor_1) for StringDescriptor_1
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.StringDescriptor_3) for StringDescriptor_3
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.StringDescriptor_2) for StringDescriptor_2
+    bsp_usb.o(.text.bsp_usb_event_handler) refers to bsp_usb.o(.rodata.StringDescriptor_0) for StringDescriptor_0
+    bsp_usb.o(.ARM.exidx.text.bsp_usb_event_handler) refers to bsp_usb.o(.text.bsp_usb_event_handler) for [Anonymous Symbol]
+    bsp_usb.o(.text.bsp_usb_disable) refers to peripheral_usb.o(.text.USB_Close) for USB_Close
+    bsp_usb.o(.text.bsp_usb_disable) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti) for SYSCTRL_SetClkGateMulti
+    bsp_usb.o(.text.bsp_usb_disable) refers to peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig) for SYSCTRL_USBPhyConfig
+    bsp_usb.o(.ARM.exidx.text.bsp_usb_disable) refers to bsp_usb.o(.text.bsp_usb_disable) for [Anonymous Symbol]
+    bsp_usb.o(.text.bsp_usb_device_remote_wakeup) refers to peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit) for USB_DeviceSetRemoteWakeupBit
+    bsp_usb.o(.text.bsp_usb_device_remote_wakeup) refers to bsp_usb.o(.text.internal_bsp_usb_device_remote_wakeup_stop) for internal_bsp_usb_device_remote_wakeup_stop
+    bsp_usb.o(.ARM.exidx.text.bsp_usb_device_remote_wakeup) refers to bsp_usb.o(.text.bsp_usb_device_remote_wakeup) for [Anonymous Symbol]
+    bsp_usb.o(.text.internal_bsp_usb_device_remote_wakeup_stop) refers to peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit) for USB_DeviceSetRemoteWakeupBit
+    bsp_usb.o(.ARM.exidx.text.internal_bsp_usb_device_remote_wakeup_stop) refers to bsp_usb.o(.text.internal_bsp_usb_device_remote_wakeup_stop) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_SetOpMode) refers to peripheral_timer.o(.text.TMR_SetOpMode) for [Anonymous Symbol]
+    peripheral_timer.o(.text.TMR_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetClk) for SYSCTRL_GetClk
+    peripheral_timer.o(.text.TMR_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for SYSCTRL_GetPClk
+    peripheral_timer.o(.ARM.exidx.text.TMR_GetClk) refers to peripheral_timer.o(.text.TMR_GetClk) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_SetReload) refers to peripheral_timer.o(.text.TMR_SetReload) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_Enable) refers to peripheral_timer.o(.text.TMR_Enable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntEnable) refers to peripheral_timer.o(.text.TMR_IntEnable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_GetCMP) refers to peripheral_timer.o(.text.TMR_GetCMP) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntClr) refers to peripheral_timer.o(.text.TMR_IntClr) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_IntHappened) refers to peripheral_timer.o(.text.TMR_IntHappened) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogEnable3) refers to peripheral_timer.o(.text.TMR_WatchDogEnable3) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogDisable) refers to peripheral_timer.o(.text.TMR_WatchDogDisable) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogRestart) refers to peripheral_timer.o(.text.TMR_WatchDogRestart) for [Anonymous Symbol]
+    peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogClearInt) refers to peripheral_timer.o(.text.TMR_WatchDogClearInt) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateSet) refers to peripheral_uart.o(.text.apUART_BaudRateSet) for [Anonymous Symbol]
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to dfltui.o(.text) for __aeabi_ui2d
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to dadd.o(.text) for __aeabi_dadd
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to dmul.o(.text) for __aeabi_dmul
+    peripheral_uart.o(.text.apUART_BaudRateGet) refers to d2f.o(.text) for __aeabi_d2f
+    peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateGet) refers to peripheral_uart.o(.text.apUART_BaudRateGet) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_Rece_ERROR) refers to peripheral_uart.o(.text.apUART_Check_Rece_ERROR) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_EMPTY) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_FULL) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_FULL) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_EMPTY) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_EMPTY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_FULL) refers to peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Check_BUSY) refers to peripheral_uart.o(.text.apUART_Check_BUSY) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Get_ITStatus) refers to peripheral_uart.o(.text.apUART_Get_ITStatus) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Enable_TRANSMIT_INT) refers to peripheral_uart.o(.text.apUART_Enable_TRANSMIT_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Disable_TRANSMIT_INT) refers to peripheral_uart.o(.text.apUART_Disable_TRANSMIT_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Enable_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Disable_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_RECEIVE_INT) refers to peripheral_uart.o(.text.apUART_Clr_RECEIVE_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_TX_INT) refers to peripheral_uart.o(.text.apUART_Clr_TX_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Get_all_raw_int_stat) refers to peripheral_uart.o(.text.apUART_Get_all_raw_int_stat) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.apUART_Clr_NonRx_INT) refers to peripheral_uart.o(.text.apUART_Clr_NonRx_INT) for [Anonymous Symbol]
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT) for apUART_Disable_RECEIVE_INT
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_disable) for uart_disable
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY) for apUART_Check_RXFIFO_EMPTY
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_empty_fifo) for uart_empty_fifo
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_enable_fifo) for uart_enable_fifo
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.uart_enable) for uart_enable
+    peripheral_uart.o(.text.uart_reset) refers to peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT) for apUART_Enable_RECEIVE_INT
+    peripheral_uart.o(.ARM.exidx.text.uart_reset) refers to peripheral_uart.o(.text.uart_reset) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_disable) refers to peripheral_uart.o(.text.uart_disable) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_empty_fifo) refers to peripheral_uart.o(.text.uart_empty_fifo) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_enable_fifo) refers to peripheral_uart.o(.text.uart_enable_fifo) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.uart_enable) refers to peripheral_uart.o(.text.uart_enable) for [Anonymous Symbol]
+    peripheral_uart.o(.text.apUART_Initialize) refers to peripheral_uart.o(.text.apUART_BaudRateSet) for apUART_BaudRateSet
+    peripheral_uart.o(.ARM.exidx.text.apUART_Initialize) refers to peripheral_uart.o(.text.apUART_Initialize) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_SendData) refers to peripheral_uart.o(.text.UART_SendData) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_ReceData) refers to peripheral_uart.o(.text.UART_ReceData) for [Anonymous Symbol]
+    peripheral_uart.o(.ARM.exidx.text.UART_DmaEnable) refers to peripheral_uart.o(.text.UART_DmaEnable) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for SYSCTRL_ClkGateCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClkGateCtrl) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl) for SYSCTRL_ClkGateCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGate) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate) for SYSCTRL_SetClkGate
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate) for SYSCTRL_ClearClkGate
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGateMulti) refers to peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for SYSCTRL_ResetBlockCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlockCtrl) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl) for SYSCTRL_ResetBlockCtrl
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ReleaseBlock) refers to peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTimerClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bit) refers to peripheral_sysctrl.o(.text.set_reg_bit) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bits) refers to peripheral_sysctrl.o(.text.set_reg_bits) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPWMClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectKeyScanClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPDMClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSpiClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUartClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectI2sClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUSBClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSlowClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectQDECClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePLL) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetSlowClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCLK32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for SYSCTRL_GetCLK32k
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCPU32k) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk) for SYSCTRL_SelectSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) for SYSCTRL_TuneSlowRC
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_AutoTuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_TuneSlowRC) refers to peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetFlashClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider) refers to peripheral_sysctrl.o(.text.get_safe_divider) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigPLLClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetHClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetPClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for SYSCTRL_GetHClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPClk) for SYSCTRL_GetPClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider6) for get_safe_divider6
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k) for SYSCTRL_GetCLK32k
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk) for SYSCTRL_GetPLLClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetHClk) for SYSCTRL_GetHClk
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider) for get_safe_divider
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) for SYSCTRL_GetAdcClkDiv
+    peripheral_sysctrl.o(.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.get_safe_divider10) for get_safe_divider10
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider6) refers to peripheral_sysctrl.o(.text.get_safe_divider6) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk) for SYSCTRL_GetSlowClk
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider10) refers to peripheral_sysctrl.o(.text.get_safe_divider10) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetAdcClkDiv) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetAdcClkDiv) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTypeAClk) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUsedDmaItems) refers to peripheral_sysctrl.o(.text.SYSCTRL_SelectUsedDmaItems) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetDmaId) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetDmaId) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigBOR) refers to peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutputFlash) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput) refers to peripheral_sysctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutput) refers to peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_WaitForLDO) refers to peripheral_sysctrl.o(.text.SYSCTRL_WaitForLDO) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_USBPhyConfig) refers to peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetAllBlocks) refers to peripheral_sysctrl.o(.text.SYSCTRL_ResetAllBlocks) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableWakeupSourceDetection) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetLastWakeupSource) refers to peripheral_sysctrl.o(.text.SYSCTRL_GetLastWakeupSource) for [Anonymous Symbol]
+    peripheral_sysctrl.o(.text.SYSCTRL_EnablePcapMode) refers to peripheral_sysctrl.o(.text.set_reg_bit) for set_reg_bit
+    peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePcapMode) refers to peripheral_sysctrl.o(.text.SYSCTRL_EnablePcapMode) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSwIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelSwIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.pin_id_for_input_source) for pin_id_for_input_source
+    peripheral_pinctrl.o(.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelInput) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.source_id_on_pin) for source_id_on_pin
+    peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetPadMux) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.source_tab) for PINCTRL_SelSpiIn.source_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.reg_tab) for PINCTRL_SelSpiIn.reg_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.bit_offset_tab) for PINCTRL_SelSpiIn.bit_offset_tab
+    peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSpiIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelIrIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelIrIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelIrIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2sIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartRxdIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartCtsIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_Pull) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cSclIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPdmIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelKeyScanColIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPCAPIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelInput) for PINCTRL_SelInput
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelQDECIn) refers to peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.source_id_on_pin) refers to peripheral_pinctrl.o(.rodata.io_output_source_map) for io_output_source_map
+    peripheral_pinctrl.o(.ARM.exidx.text.source_id_on_pin) refers to peripheral_pinctrl.o(.text.source_id_on_pin) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.set_reg_bits) refers to peripheral_pinctrl.o(.text.set_reg_bits) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_DisableAllInputs) refers to peripheral_pinctrl.o(.text.PINCTRL_DisableAllInputs) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetDriveStrength) refers to peripheral_pinctrl.o(.text.PINCTRL_SetDriveStrength) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAntSelPins) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.set_reg_bits) for set_reg_bits
+    peripheral_pinctrl.o(.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) for PINCTRL_EnableAnalog
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUSB) refers to peripheral_pinctrl.o(.text.PINCTRL_SelUSB) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_SetPadMux) for PINCTRL_SetPadMux
+    peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_Pull) for PINCTRL_Pull
+    peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAnalog) refers to peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog) for [Anonymous Symbol]
+    peripheral_pinctrl.o(.text.pin_id_for_input_source) refers to peripheral_pinctrl.o(.rodata.io_output_source_map) for io_output_source_map
+    peripheral_pinctrl.o(.ARM.exidx.text.pin_id_for_input_source) refers to peripheral_pinctrl.o(.text.pin_id_for_input_source) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_SetDirection) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_SetDirection) refers to peripheral_gpio.o(.text.GIO_SetDirection) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_MaskedWrite) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetDirection) refers to peripheral_gpio.o(.text.GIO_GetDirection) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_WriteValue) refers to peripheral_gpio.o(.text.GIO_WriteValue) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ReadValue) refers to peripheral_gpio.o(.text.GIO_ReadValue) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.map_int_mode) for map_int_mode
+    peripheral_gpio.o(.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ConfigIntSource) refers to peripheral_gpio.o(.text.GIO_ConfigIntSource) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.map_int_mode) refers to peripheral_gpio.o(.text.map_int_mode) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetIntStatus) refers to peripheral_gpio.o(.text.GIO_GetIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearIntStatus) refers to peripheral_gpio.o(.text.GIO_ClearIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceCtrl) refers to peripheral_gpio.o(.text.GIO_DebounceCtrl) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_DebounceEn) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceEn) refers to peripheral_gpio.o(.text.GIO_DebounceEn) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_WriteAll) refers to peripheral_gpio.o(.text.GIO_WriteAll) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ReadAll) refers to peripheral_gpio.o(.text.GIO_ReadAll) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_GetAllIntStatus) refers to peripheral_gpio.o(.text.GIO_GetAllIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearAllIntStatus) refers to peripheral_gpio.o(.text.GIO_ClearAllIntStatus) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableRetentionGroupA) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupA) refers to peripheral_gpio.o(.text.GIO_EnableRetentionGroupA) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableRetentionGroupB) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupB) refers to peripheral_gpio.o(.text.GIO_EnableRetentionGroupB) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableHighZGroupB) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableHighZGroupB) refers to peripheral_gpio.o(.text.GIO_EnableHighZGroupB) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeepSleepWakeupSource) refers to peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource) for [Anonymous Symbol]
+    peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA) refers to peripheral_gpio.o(.text.GIO_MaskedWrite) for GIO_MaskedWrite
+    peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeeperSleepWakeupSourceGroupA) refers to peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_SetBits) refers to peripheral_gpio.o(.text.GIO_SetBits) for [Anonymous Symbol]
+    peripheral_gpio.o(.ARM.exidx.text.GIO_ClearBits) refers to peripheral_gpio.o(.text.GIO_ClearBits) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_CoreReset) refers to peripheral_usb.o(.text.nop) for nop
+    peripheral_usb.o(.ARM.exidx.text.USB_CoreReset) refers to peripheral_usb.o(.text.USB_CoreReset) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.nop) refers to peripheral_usb.o(.text.nop) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_SetupDataFifo) refers to peripheral_usb.o(.text.USB_SetupDataFifo) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_FlushTXFifo) refers to peripheral_usb.o(.text.USB_FlushTXFifo) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_FlushRXFifo) refers to peripheral_usb.o(.text.USB_FlushRXFifo) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_DeviceInitialization) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_DeviceInitialization) refers to peripheral_usb.o(.text.USB_DeviceInitialization) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_DeviceSetThreshold) refers to peripheral_usb.o(.text.USB_DeviceSetThreshold) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_CoreReset) for USB_CoreReset
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_SetupDataFifo) for USB_SetupDataFifo
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_FlushTXFifo) for USB_FlushTXFifo
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_FlushRXFifo) for USB_FlushRXFifo
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_DeviceInitialization) for USB_DeviceInitialization
+    peripheral_usb.o(.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_ResetTransfert) for USB_ResetTransfert
+    peripheral_usb.o(.ARM.exidx.text.USB_InitConfig) refers to peripheral_usb.o(.text.USB_InitConfig) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_ResetTransfert) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_ResetTransfert) refers to peripheral_usb.o(.text.USB_ResetTransfert) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_ReInit) refers to peripheral_usb.o(.text.USB_FlushTXFifo) for USB_FlushTXFifo
+    peripheral_usb.o(.text.USB_ReInit) refers to peripheral_usb.o(.text.USB_FlushRXFifo) for USB_FlushRXFifo
+    peripheral_usb.o(.text.USB_ReInit) refers to peripheral_usb.o(.text.USB_ClrConfig) for USB_ClrConfig
+    peripheral_usb.o(.text.USB_ReInit) refers to peripheral_usb.o(.text.USB_ResetTransfert) for USB_ResetTransfert
+    peripheral_usb.o(.ARM.exidx.text.USB_ReInit) refers to peripheral_usb.o(.text.USB_ReInit) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_ClrConfig) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_ClrConfig) refers to peripheral_usb.o(.text.USB_DisableEp) for USB_DisableEp
+    peripheral_usb.o(.ARM.exidx.text.USB_ClrConfig) refers to peripheral_usb.o(.text.USB_ClrConfig) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_CancelTransfert) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_CancelTransfert) refers to peripheral_usb.o(.text.USB_CancelTransfert) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_DisableEp) refers to peripheral_usb.o(.text.USB_FlushTXFifo) for USB_FlushTXFifo
+    peripheral_usb.o(.text.USB_DisableEp) refers to peripheral_usb.o(.text.USB_CancelTransfert) for USB_CancelTransfert
+    peripheral_usb.o(.ARM.exidx.text.USB_DisableEp) refers to peripheral_usb.o(.text.USB_DisableEp) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_GetSetupPacket) refers to peripheral_usb.o(.bss.g_UsbBufferEp0Out) for g_UsbBufferEp0Out
+    peripheral_usb.o(.ARM.exidx.text.USB_GetSetupPacket) refers to peripheral_usb.o(.text.USB_GetSetupPacket) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_GetMaxTransferSize) refers to peripheral_usb.o(.text.USB_GetMaxTransferSize) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_GetMaxPacketSize) refers to peripheral_usb.o(.text.USB_GetMaxPacketSize) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_GetTransferSize) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_GetTransferSize) refers to peripheral_usb.o(.text.USB_GetMaxTransferSize) for USB_GetMaxTransferSize
+    peripheral_usb.o(.text.USB_GetTransferSize) refers to peripheral_usb.o(.text.USB_GetMaxPacketSize) for USB_GetMaxPacketSize
+    peripheral_usb.o(.ARM.exidx.text.USB_GetTransferSize) refers to peripheral_usb.o(.text.USB_GetTransferSize) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_NewTransfer) refers to peripheral_usb.o(.text.USB_NewTransfer) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_StartTransfer) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_StartTransfer) refers to peripheral_usb.o(.text.USB_GetTransferSize) for USB_GetTransferSize
+    peripheral_usb.o(.text.USB_StartTransfer) refers to peripheral_usb.o(.text.USB_NewTransfer) for USB_NewTransfer
+    peripheral_usb.o(.ARM.exidx.text.USB_StartTransfer) refers to peripheral_usb.o(.text.USB_StartTransfer) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_ContinueTransfer) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_ContinueTransfer) refers to peripheral_usb.o(.text.USB_GetTransferSize) for USB_GetTransferSize
+    peripheral_usb.o(.text.USB_ContinueTransfer) refers to peripheral_usb.o(.text.USB_NewTransfer) for USB_NewTransfer
+    peripheral_usb.o(.ARM.exidx.text.USB_ContinueTransfer) refers to peripheral_usb.o(.text.USB_ContinueTransfer) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_EnableEp) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_EnableEp) refers to peripheral_usb.o(.text.USB_EnableEp) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_ConfigureEp) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_ConfigureEp) refers to peripheral_usb.o(.text.USB_EnableEp) for USB_EnableEp
+    peripheral_usb.o(.ARM.exidx.text.USB_ConfigureEp) refers to peripheral_usb.o(.text.USB_ConfigureEp) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_SetStallEp) refers to peripheral_usb.o(.text.USB_SetStallEp) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_PCStopPhyClcok) refers to peripheral_usb.o(.text.nop) for nop
+    peripheral_usb.o(.ARM.exidx.text.USB_PCStopPhyClcok) refers to peripheral_usb.o(.text.USB_PCStopPhyClcok) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_SendData) refers to peripheral_usb.o(.text.USB_StartTransfer) for USB_StartTransfer
+    peripheral_usb.o(.ARM.exidx.text.USB_SendData) refers to peripheral_usb.o(.text.USB_SendData) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_RecvData) refers to peripheral_usb.o(.text.USB_StartTransfer) for USB_StartTransfer
+    peripheral_usb.o(.ARM.exidx.text.USB_RecvData) refers to peripheral_usb.o(.text.USB_RecvData) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_EP0StatusIn) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_EP0StatusIn) refers to peripheral_usb.o(.bss.g_UsbBufferEp0In) for g_UsbBufferEp0In
+    peripheral_usb.o(.text.USB_EP0StatusIn) refers to peripheral_usb.o(.text.USB_SendData) for USB_SendData
+    peripheral_usb.o(.text.USB_EP0StatusIn) refers to peripheral_usb.o(.text.USB_GetSetupPacket) for USB_GetSetupPacket
+    peripheral_usb.o(.ARM.exidx.text.USB_EP0StatusIn) refers to peripheral_usb.o(.text.USB_EP0StatusIn) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_EP0StatusOut) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_EP0StatusOut) refers to peripheral_usb.o(.bss.g_UsbBufferEp0Out) for g_UsbBufferEp0Out
+    peripheral_usb.o(.text.USB_EP0StatusOut) refers to peripheral_usb.o(.text.USB_RecvData) for USB_RecvData
+    peripheral_usb.o(.ARM.exidx.text.USB_EP0StatusOut) refers to peripheral_usb.o(.text.USB_EP0StatusOut) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_GetEp0SetupData) refers to peripheral_usb.o(.bss.g_UsbBufferEp0Out) for g_UsbBufferEp0Out
+    peripheral_usb.o(.ARM.exidx.text.USB_GetEp0SetupData) refers to peripheral_usb.o(.text.USB_GetEp0SetupData) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_SetEp0Stall) refers to peripheral_usb.o(.text.USB_SetStallEp) for USB_SetStallEp
+    peripheral_usb.o(.text.USB_SetEp0Stall) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_SetEp0Stall) refers to peripheral_usb.o(.text.USB_GetSetupPacket) for USB_GetSetupPacket
+    peripheral_usb.o(.ARM.exidx.text.USB_SetEp0Stall) refers to peripheral_usb.o(.text.USB_SetEp0Stall) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.bss.g_UsbBufferEp0Out) for g_UsbBufferEp0Out
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_ContinueTransfer) for USB_ContinueTransfer
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_EP0StatusIn) for USB_EP0StatusIn
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_GetSetupPacket) for USB_GetSetupPacket
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_EP0StatusOut) for USB_EP0StatusOut
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_SetEp0Stall) for USB_SetEp0Stall
+    peripheral_usb.o(.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_RecvData) for USB_RecvData
+    peripheral_usb.o(.ARM.exidx.text.USB_HandleEp0) refers to peripheral_usb.o(.text.USB_HandleEp0) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_ReInit) for USB_ReInit
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_GetSetupPacket) for USB_GetSetupPacket
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_PCStopPhyClcok) for USB_PCStopPhyClcok
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_HandleEp0) for USB_HandleEp0
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_ContinueTransfer) for USB_ContinueTransfer
+    peripheral_usb.o(.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_EP0StatusIn) for USB_EP0StatusIn
+    peripheral_usb.o(.ARM.exidx.text.USB_IrqHandler) refers to peripheral_usb.o(.text.USB_IrqHandler) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit) refers to peripheral_usb.o(.text.USB_PCStopPhyClcok) for USB_PCStopPhyClcok
+    peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_DeviceSetRemoteWakeupBit) refers to peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_AsciiToUtf8) refers to peripheral_usb.o(.text.USB_AsciiToUtf8) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_GetDeviceState) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_GetDeviceState) refers to peripheral_usb.o(.text.USB_GetDeviceState) for [Anonymous Symbol]
+    peripheral_usb.o(.text.USB_Close) refers to peripheral_usb.o(.text.USB_ClrConfig) for USB_ClrConfig
+    peripheral_usb.o(.text.USB_Close) refers to peripheral_usb.o(.text.USB_ResetTransfert) for USB_ResetTransfert
+    peripheral_usb.o(.text.USB_Close) refers to peripheral_usb.o(.bss.g_UsbVar) for g_UsbVar
+    peripheral_usb.o(.ARM.exidx.text.USB_Close) refers to peripheral_usb.o(.text.USB_Close) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_SetGlobalOutNak) refers to peripheral_usb.o(.text.USB_SetGlobalOutNak) for [Anonymous Symbol]
+    peripheral_usb.o(.ARM.exidx.text.USB_SetInEndpointNak) refers to peripheral_usb.o(.text.USB_SetInEndpointNak) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_ing91600.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_ing91600.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to startup_ing91600.o(.text) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to startup_ing91600.o(.text) for main
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.cb_putc), (8 bytes).
+    Removing main.o(.text.fputc), (20 bytes).
+    Removing main.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing main.o(.ARM.exidx.text.config_uart), (8 bytes).
+    Removing main.o(.ARM.exidx.text.setup_peripherals), (8 bytes).
+    Removing main.o(.ARM.exidx.text.app_main), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_hard_fault), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_assertion), (8 bytes).
+    Removing main.o(.ARM.exidx.text.cb_heap_out_of_mem), (8 bytes).
+    Removing main.o(.ARM.exidx.text.watchdog_task), (8 bytes).
+    Removing main.o(.bss.trace_ctx), (1 bytes).
+    Removing main.o(.bss.xTimer), (4 bytes).
+    Removing startup_ing91600.o(HEAP), (0 bytes).
+    Removing bsp_usb.o(.text), (0 bytes).
+    Removing bsp_usb.o(.ARM.exidx.text.bsp_usb_init), (8 bytes).
+    Removing bsp_usb.o(.ARM.exidx.text.bsp_usb_event_handler), (8 bytes).
+    Removing bsp_usb.o(.text.bsp_usb_disable), (24 bytes).
+    Removing bsp_usb.o(.ARM.exidx.text.bsp_usb_disable), (8 bytes).
+    Removing bsp_usb.o(.text.bsp_usb_device_remote_wakeup), (24 bytes).
+    Removing bsp_usb.o(.ARM.exidx.text.bsp_usb_device_remote_wakeup), (8 bytes).
+    Removing bsp_usb.o(.text.internal_bsp_usb_device_remote_wakeup_stop), (10 bytes).
+    Removing bsp_usb.o(.ARM.exidx.text.internal_bsp_usb_device_remote_wakeup_stop), (8 bytes).
+    Removing peripheral_timer.o(.text), (0 bytes).
+    Removing peripheral_timer.o(.text.TMR_SetOpMode), (24 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_SetOpMode), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_GetClk), (50 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_GetClk), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_SetReload), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_SetReload), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_Enable), (34 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_Enable), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntEnable), (34 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntEnable), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_GetCMP), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_GetCMP), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntClr), (14 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntClr), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_IntHappened), (12 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_IntHappened), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogEnable3), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_WatchDogDisable), (36 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogDisable), (8 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogRestart), (8 bytes).
+    Removing peripheral_timer.o(.text.TMR_WatchDogClearInt), (14 bytes).
+    Removing peripheral_timer.o(.ARM.exidx.text.TMR_WatchDogClearInt), (8 bytes).
+    Removing peripheral_uart.o(.text), (0 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateSet), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_BaudRateGet), (120 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_BaudRateGet), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_Rece_ERROR), (32 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_Rece_ERROR), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_RXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_RXFIFO_FULL), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_RXFIFO_FULL), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_TXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_EMPTY), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_TXFIFO_FULL), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Check_BUSY), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Check_BUSY), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Get_ITStatus), (18 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Get_ITStatus), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Enable_TRANSMIT_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Enable_TRANSMIT_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Disable_TRANSMIT_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Disable_TRANSMIT_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Enable_RECEIVE_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Enable_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Disable_RECEIVE_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Disable_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_RECEIVE_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_RECEIVE_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_TX_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_TX_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Get_all_raw_int_stat), (4 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Get_all_raw_int_stat), (8 bytes).
+    Removing peripheral_uart.o(.text.apUART_Clr_NonRx_INT), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Clr_NonRx_INT), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_reset), (72 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_reset), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_disable), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_disable), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_empty_fifo), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_empty_fifo), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_enable_fifo), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_enable_fifo), (8 bytes).
+    Removing peripheral_uart.o(.text.uart_enable), (10 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.uart_enable), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.apUART_Initialize), (8 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_SendData), (8 bytes).
+    Removing peripheral_uart.o(.text.UART_ReceData), (6 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_ReceData), (8 bytes).
+    Removing peripheral_uart.o(.text.UART_DmaEnable), (12 bytes).
+    Removing peripheral_uart.o(.ARM.exidx.text.UART_DmaEnable), (8 bytes).
+    Removing peripheral_sysctrl.o(.text), (0 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetClkGate), (10 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGate), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClkGateCtrl), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGate), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetClkGateMulti), (32 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetClkGateMulti), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ClearClkGateMulti), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ResetBlock), (10 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlock), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ResetBlockCtrl), (610 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetBlockCtrl), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ReleaseBlock), (10 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ReleaseBlock), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectTimerClk), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTimerClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bit), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.set_reg_bits), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectPWMClk), (54 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPWMClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectKeyScanClk), (56 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectKeyScanClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectPDMClk), (34 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectPDMClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectSpiClk), (82 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSpiClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectUartClk), (30 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUartClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectI2sClk), (62 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectI2sClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectHClk), (92 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectHClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUSBClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectFlashClk), (72 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectFlashClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectSlowClk), (64 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectSlowClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectQDECClk), (44 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectQDECClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnablePLL), (38 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePLL), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnableSlowRC), (66 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetSlowClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectCLK32k), (62 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCLK32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCLK32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectCPU32k), (18 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectCPU32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetCPU32k), (24 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetCPU32k), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_AutoTuneSlowRC), (234 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_AutoTuneSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_TuneSlowRC), (22 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_TuneSlowRC), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPLLClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetFlashClk), (40 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetFlashClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ConfigPLLClk), (204 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigPLLClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetHClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetPClkDiv), (30 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetPClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetPClkDiv), (14 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetPClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider6), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetAdcClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.get_safe_divider10), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetAdcClkDiv), (32 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetAdcClkDiv), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectTypeAClk), (64 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectTypeAClk), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SelectUsedDmaItems), (108 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SelectUsedDmaItems), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetDmaId), (60 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetDmaId), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ConfigBOR), (70 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ConfigBOR), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutputFlash), (36 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutputFlash), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_SetLDOOutput), (24 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_SetLDOOutput), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_WaitForLDO), (2 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_WaitForLDO), (8 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_USBPhyConfig), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_ResetAllBlocks), (16 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_ResetAllBlocks), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnableWakeupSourceDetection), (20 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnableWakeupSourceDetection), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_GetLastWakeupSource), (150 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_GetLastWakeupSource), (8 bytes).
+    Removing peripheral_sysctrl.o(.text.SYSCTRL_EnablePcapMode), (20 bytes).
+    Removing peripheral_sysctrl.o(.ARM.exidx.text.SYSCTRL_EnablePcapMode), (8 bytes).
+    Removing peripheral_pinctrl.o(.text), (0 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelSwIn), (74 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSwIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelInput), (104 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelInput), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetPadMux), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelSpiIn), (238 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelSpiIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelIrIn), (26 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelIrIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2sIn), (78 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2sIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartIn), (100 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartRxdIn), (58 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartRxdIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelUartCtsIn), (58 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUartCtsIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2cIn), (148 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_Pull), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelI2cSclIn), (80 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelI2cSclIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelPdmIn), (26 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPdmIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelKeyScanColIn), (136 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelKeyScanColIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelPCAPIn), (32 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelPCAPIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SelQDECIn), (58 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelQDECIn), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.source_id_on_pin), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.set_reg_bits), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_DisableAllInputs), (26 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_DisableAllInputs), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_SetDriveStrength), (60 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SetDriveStrength), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.PINCTRL_EnableAntSelPins), (50 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAntSelPins), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_SelUSB), (8 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.PINCTRL_EnableAnalog), (8 bytes).
+    Removing peripheral_pinctrl.o(.text.pin_id_for_input_source), (92 bytes).
+    Removing peripheral_pinctrl.o(.ARM.exidx.text.pin_id_for_input_source), (8 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.source_tab), (12 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.reg_tab), (12 bytes).
+    Removing peripheral_pinctrl.o(.rodata.PINCTRL_SelSpiIn.bit_offset_tab), (12 bytes).
+    Removing peripheral_gpio.o(.text), (0 bytes).
+    Removing peripheral_gpio.o(.text.GIO_SetDirection), (116 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_SetDirection), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_MaskedWrite), (28 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_MaskedWrite), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetDirection), (70 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetDirection), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_WriteValue), (60 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_WriteValue), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ReadValue), (32 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ReadValue), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ConfigIntSource), (118 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ConfigIntSource), (8 bytes).
+    Removing peripheral_gpio.o(.text.map_int_mode), (48 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.map_int_mode), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetIntStatus), (32 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ClearIntStatus), (38 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_DebounceCtrl), (34 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceCtrl), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_DebounceEn), (34 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_DebounceEn), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_WriteAll), (36 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_WriteAll), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ReadAll), (28 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ReadAll), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_GetAllIntStatus), (28 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_GetAllIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ClearAllIntStatus), (26 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearAllIntStatus), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableRetentionGroupA), (40 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupA), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableRetentionGroupB), (96 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableRetentionGroupB), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableHighZGroupB), (96 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableHighZGroupB), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableDeepSleepWakeupSource), (272 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeepSleepWakeupSource), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_EnableDeeperSleepWakeupSourceGroupA), (38 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_EnableDeeperSleepWakeupSourceGroupA), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_SetBits), (44 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_SetBits), (8 bytes).
+    Removing peripheral_gpio.o(.text.GIO_ClearBits), (44 bytes).
+    Removing peripheral_gpio.o(.ARM.exidx.text.GIO_ClearBits), (8 bytes).
+    Removing peripheral_usb.o(.text), (0 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_CoreReset), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.nop), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SetupDataFifo), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_FlushTXFifo), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_FlushRXFifo), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_DeviceInitialization), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_DeviceSetThreshold), (86 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_DeviceSetThreshold), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_InitConfig), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_ResetTransfert), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_ReInit), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_ClrConfig), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_CancelTransfert), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_DisableEp), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetSetupPacket), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetMaxTransferSize), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetMaxPacketSize), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetTransferSize), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_NewTransfer), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_StartTransfer), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_ContinueTransfer), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_EnableEp), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_ConfigureEp), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SetStallEp), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_PCStopPhyClcok), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SendData), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_RecvData), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_EP0StatusIn), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_EP0StatusOut), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetEp0SetupData), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SetEp0Stall), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_HandleEp0), (8 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_IrqHandler), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_DeviceSetRemoteWakeupBit), (56 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_DeviceSetRemoteWakeupBit), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_AsciiToUtf8), (32 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_AsciiToUtf8), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_GetDeviceState), (12 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_GetDeviceState), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_Close), (44 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_Close), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_SetGlobalOutNak), (44 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SetGlobalOutNak), (8 bytes).
+    Removing peripheral_usb.o(.text.USB_SetInEndpointNak), (74 bytes).
+    Removing peripheral_usb.o(.ARM.exidx.text.USB_SetInEndpointNak), (8 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing dfltui.o(.text), (26 bytes).
+    Removing d2f.o(.text), (56 bytes).
+    Removing fepilogue.o(.text), (110 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+
+334 unused section(s) (total 9061 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
+    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../fplib/microlib/d2f.c                  0x00000000   Number         0  d2f.o ABSOLUTE
+    ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
+    ../fplib/microlib/fpflt.c                0x00000000   Number         0  dfltui.o ABSOLUTE
+    ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    bsp_usb.c                                0x00000000   Number         0  bsp_usb.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    peripheral_gpio.c                        0x00000000   Number         0  peripheral_gpio.o ABSOLUTE
+    peripheral_pinctrl.c                     0x00000000   Number         0  peripheral_pinctrl.o ABSOLUTE
+    peripheral_sysctrl.c                     0x00000000   Number         0  peripheral_sysctrl.o ABSOLUTE
+    peripheral_timer.c                       0x00000000   Number         0  peripheral_timer.o ABSOLUTE
+    peripheral_uart.c                        0x00000000   Number         0  peripheral_uart.o ABSOLUTE
+    peripheral_usb.c                         0x00000000   Number         0  peripheral_usb.o ABSOLUTE
+    src\startup_ing91600.s                   0x00000000   Number         0  startup_ing91600.o ABSOLUTE
+    RESET                                    0x02028000   Section        8  startup_ing91600.o(RESET)
+    .ARM.Collect$$$$00000000                 0x02028008   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x02028008   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x0202800c   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x02028010   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x02028010   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x02028010   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x02028018   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x02028018   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x02028018   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x02028018   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    $v0                                      0x0202801c   Number         0  startup_ing91600.o(.text)
+    .text                                    0x0202801c   Section       40  startup_ing91600.o(.text)
+    .text                                    0x02028044   Section       36  init.o(.text)
+    .text                                    0x02028068   Section        0  memseta.o(.text)
+    [Anonymous Symbol]                       0x0202808c   Section        0  peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog)
+    [Anonymous Symbol]                       0x020280e0   Section        0  peripheral_pinctrl.o(.text.PINCTRL_Pull)
+    [Anonymous Symbol]                       0x02028130   Section        0  peripheral_pinctrl.o(.text.PINCTRL_SelUSB)
+    [Anonymous Symbol]                       0x02028174   Section        0  peripheral_pinctrl.o(.text.PINCTRL_SetPadMux)
+    [Anonymous Symbol]                       0x02028274   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate)
+    [Anonymous Symbol]                       0x02028280   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti)
+    SYSCTRL_ClkGateCtrl                      0x020282a1   Thumb Code   700  peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl)
+    [Anonymous Symbol]                       0x020282a0   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_ClkGateCtrl)
+    [Anonymous Symbol]                       0x0202855c   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv)
+    [Anonymous Symbol]                       0x02028580   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k)
+    [Anonymous Symbol]                       0x020285a4   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetClk)
+    [Anonymous Symbol]                       0x020286f8   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetHClk)
+    [Anonymous Symbol]                       0x02028720   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetPClk)
+    [Anonymous Symbol]                       0x02028738   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk)
+    [Anonymous Symbol]                       0x02028774   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk)
+    [Anonymous Symbol]                       0x020287e8   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk)
+    [Anonymous Symbol]                       0x02028808   Section        0  peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig)
+    [Anonymous Symbol]                       0x02028824   Section        0  peripheral_timer.o(.text.TMR_WatchDogEnable3)
+    [Anonymous Symbol]                       0x02028944   Section        0  peripheral_timer.o(.text.TMR_WatchDogRestart)
+    [Anonymous Symbol]                       0x0202895c   Section        0  peripheral_uart.o(.text.UART_SendData)
+    [Anonymous Symbol]                       0x02028960   Section        0  peripheral_usb.o(.text.USB_CancelTransfert)
+    [Anonymous Symbol]                       0x02028998   Section        0  peripheral_usb.o(.text.USB_ClrConfig)
+    [Anonymous Symbol]                       0x020289cc   Section        0  peripheral_usb.o(.text.USB_ConfigureEp)
+    [Anonymous Symbol]                       0x02028a20   Section        0  peripheral_usb.o(.text.USB_ContinueTransfer)
+    [Anonymous Symbol]                       0x02028ac4   Section        0  peripheral_usb.o(.text.USB_CoreReset)
+    [Anonymous Symbol]                       0x02028aec   Section        0  peripheral_usb.o(.text.USB_DeviceInitialization)
+    [Anonymous Symbol]                       0x02028b50   Section        0  peripheral_usb.o(.text.USB_DisableEp)
+    [Anonymous Symbol]                       0x02028c60   Section        0  peripheral_usb.o(.text.USB_EP0StatusIn)
+    [Anonymous Symbol]                       0x02028c84   Section        0  peripheral_usb.o(.text.USB_EP0StatusOut)
+    [Anonymous Symbol]                       0x02028ca4   Section        0  peripheral_usb.o(.text.USB_EnableEp)
+    [Anonymous Symbol]                       0x02028dac   Section        0  peripheral_usb.o(.text.USB_FlushRXFifo)
+    [Anonymous Symbol]                       0x02028de0   Section        0  peripheral_usb.o(.text.USB_FlushTXFifo)
+    [Anonymous Symbol]                       0x02028e2c   Section        0  peripheral_usb.o(.text.USB_GetEp0SetupData)
+    [Anonymous Symbol]                       0x02028e38   Section        0  peripheral_usb.o(.text.USB_GetMaxPacketSize)
+    [Anonymous Symbol]                       0x02028e50   Section        0  peripheral_usb.o(.text.USB_GetMaxTransferSize)
+    [Anonymous Symbol]                       0x02028e68   Section        0  peripheral_usb.o(.text.USB_GetSetupPacket)
+    [Anonymous Symbol]                       0x02028e8c   Section        0  peripheral_usb.o(.text.USB_GetTransferSize)
+    [Anonymous Symbol]                       0x02028f4c   Section        0  peripheral_usb.o(.text.USB_HandleEp0)
+    [Anonymous Symbol]                       0x02029060   Section        0  peripheral_usb.o(.text.USB_InitConfig)
+    [Anonymous Symbol]                       0x020290e8   Section        0  peripheral_usb.o(.text.USB_IrqHandler)
+    [Anonymous Symbol]                       0x020293ac   Section        0  peripheral_usb.o(.text.USB_NewTransfer)
+    [Anonymous Symbol]                       0x02029470   Section        0  peripheral_usb.o(.text.USB_PCStopPhyClcok)
+    [Anonymous Symbol]                       0x020294a0   Section        0  peripheral_usb.o(.text.USB_ReInit)
+    [Anonymous Symbol]                       0x020294b8   Section        0  peripheral_usb.o(.text.USB_RecvData)
+    [Anonymous Symbol]                       0x020294fc   Section        0  peripheral_usb.o(.text.USB_ResetTransfert)
+    [Anonymous Symbol]                       0x02029538   Section        0  peripheral_usb.o(.text.USB_SendData)
+    [Anonymous Symbol]                       0x02029584   Section        0  peripheral_usb.o(.text.USB_SetEp0Stall)
+    [Anonymous Symbol]                       0x020295a0   Section        0  peripheral_usb.o(.text.USB_SetStallEp)
+    [Anonymous Symbol]                       0x02029614   Section        0  peripheral_usb.o(.text.USB_SetupDataFifo)
+    [Anonymous Symbol]                       0x02029640   Section        0  peripheral_usb.o(.text.USB_StartTransfer)
+    [Anonymous Symbol]                       0x020296c8   Section        0  peripheral_uart.o(.text.apUART_BaudRateSet)
+    [Anonymous Symbol]                       0x020296fc   Section        0  peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL)
+    [Anonymous Symbol]                       0x02029704   Section        0  peripheral_uart.o(.text.apUART_Initialize)
+    [Anonymous Symbol]                       0x0202977c   Section        0  main.o(.text.app_main)
+    bsp_usb_event_handler                    0x020297e9   Thumb Code   704  bsp_usb.o(.text.bsp_usb_event_handler)
+    [Anonymous Symbol]                       0x020297e8   Section        0  bsp_usb.o(.text.bsp_usb_event_handler)
+    [Anonymous Symbol]                       0x02029ae8   Section        0  bsp_usb.o(.text.bsp_usb_init)
+    cb_assertion                             0x02029b51   Thumb Code    16  main.o(.text.cb_assertion)
+    [Anonymous Symbol]                       0x02029b50   Section        0  main.o(.text.cb_assertion)
+    cb_hard_fault                            0x02029b79   Thumb Code    42  main.o(.text.cb_hard_fault)
+    [Anonymous Symbol]                       0x02029b78   Section        0  main.o(.text.cb_hard_fault)
+    cb_heap_out_of_mem                       0x02029ba5   Thumb Code    12  main.o(.text.cb_heap_out_of_mem)
+    [Anonymous Symbol]                       0x02029ba4   Section        0  main.o(.text.cb_heap_out_of_mem)
+    [Anonymous Symbol]                       0x02029bbc   Section        0  main.o(.text.cb_putc)
+    [Anonymous Symbol]                       0x02029be0   Section        0  main.o(.text.config_uart)
+    get_safe_divider                         0x02029c1d   Thumb Code    20  peripheral_sysctrl.o(.text.get_safe_divider)
+    [Anonymous Symbol]                       0x02029c1c   Section        0  peripheral_sysctrl.o(.text.get_safe_divider)
+    get_safe_divider10                       0x02029c31   Thumb Code    20  peripheral_sysctrl.o(.text.get_safe_divider10)
+    [Anonymous Symbol]                       0x02029c30   Section        0  peripheral_sysctrl.o(.text.get_safe_divider10)
+    get_safe_divider6                        0x02029c45   Thumb Code    22  peripheral_sysctrl.o(.text.get_safe_divider6)
+    [Anonymous Symbol]                       0x02029c44   Section        0  peripheral_sysctrl.o(.text.get_safe_divider6)
+    nop                                      0x02029c5d   Thumb Code    16  peripheral_usb.o(.text.nop)
+    [Anonymous Symbol]                       0x02029c5c   Section        0  peripheral_usb.o(.text.nop)
+    set_reg_bit                              0x02029c6d   Thumb Code    26  peripheral_sysctrl.o(.text.set_reg_bit)
+    [Anonymous Symbol]                       0x02029c6c   Section        0  peripheral_sysctrl.o(.text.set_reg_bit)
+    set_reg_bits                             0x02029c89   Thumb Code    34  peripheral_sysctrl.o(.text.set_reg_bits)
+    [Anonymous Symbol]                       0x02029c88   Section        0  peripheral_sysctrl.o(.text.set_reg_bits)
+    set_reg_bits                             0x02029cad   Thumb Code    36  peripheral_pinctrl.o(.text.set_reg_bits)
+    [Anonymous Symbol]                       0x02029cac   Section        0  peripheral_pinctrl.o(.text.set_reg_bits)
+    [Anonymous Symbol]                       0x02029cd0   Section        0  main.o(.text.setup_peripherals)
+    source_id_on_pin                         0x02029d49   Thumb Code    94  peripheral_pinctrl.o(.text.source_id_on_pin)
+    [Anonymous Symbol]                       0x02029d48   Section        0  peripheral_pinctrl.o(.text.source_id_on_pin)
+    watchdog_task                            0x02029da9   Thumb Code    14  main.o(.text.watchdog_task)
+    [Anonymous Symbol]                       0x02029da8   Section        0  main.o(.text.watchdog_task)
+    i.__scatterload_copy                     0x02029db6   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x02029dc4   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x02029dc6   Section       14  handlers.o(i.__scatterload_zeroinit)
+    .L.str.2                                 0x0202a218   Data         108  main.o(.rodata.str1.1)
+    [Anonymous Symbol]                       0x0202a218   Section        0  main.o(.rodata.str1.1)
+    g_UsbBufferEp0In                         0x200055ec   Data          64  peripheral_usb.o(.bss.g_UsbBufferEp0In)
+    [Anonymous Symbol]                       0x200055ec   Section        0  peripheral_usb.o(.bss.g_UsbBufferEp0In)
+    g_UsbBufferEp0Out                        0x2000562c   Data          64  peripheral_usb.o(.bss.g_UsbBufferEp0Out)
+    [Anonymous Symbol]                       0x2000562c   Section        0  peripheral_usb.o(.bss.g_UsbBufferEp0Out)
+    STACK                                    0x20005738   Section        4  startup_ing91600.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv4$E$P$D$K$B$S$7EM$VFPi3$EXTD16$VFPS$VFMA$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$ROPI$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    att_dispatch_client_can_send_now         0x02004379   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_client_request_can_send_now_event 0x0200437f   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_register_client             0x02004385   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_register_server             0x02004399   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_server_can_send_now         0x020043ad   Thumb Code     0  symdefs.m ABSOLUTE
+    att_dispatch_server_request_can_send_now_event 0x020043b3   Thumb Code     0  symdefs.m ABSOLUTE
+    att_emit_general_event                   0x02004465   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_can_send_packet_now           0x02004b81   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_deferred_read_response        0x02004b85   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_get_mtu                       0x02004b9d   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_indicate                      0x02004c15   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_init                          0x02004c99   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_notify                        0x02004cd5   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_register_packet_handler       0x02004ded   Thumb Code     0  symdefs.m ABSOLUTE
+    att_server_request_can_send_now_event    0x02004df9   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_db                               0x02004e15   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_read_callback                    0x02004e29   Thumb Code     0  symdefs.m ABSOLUTE
+    att_set_write_callback                   0x02004e35   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_cmp                              0x0200501d   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_copy                             0x02005023   Thumb Code     0  symdefs.m ABSOLUTE
+    bd_addr_to_str                           0x0200502d   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_read_16                       0x02005065   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_read_32                       0x0200506d   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_store_16                      0x02005081   Thumb Code     0  symdefs.m ABSOLUTE
+    big_endian_store_32                      0x0200508d   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_config                           0x02005209   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_create               0x02005347   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_free                 0x02005371   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_memory_pool_get                  0x020053d1   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_push_user_msg                    0x02005439   Thumb Code     0  symdefs.m ABSOLUTE
+    btstack_push_user_runnable               0x02005445   Thumb Code     0  symdefs.m ABSOLUTE
+    char_for_nibble                          0x020056e3   Thumb Code     0  symdefs.m ABSOLUTE
+    eTaskConfirmSleepModeStatus              0x02005a29   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_add_dev_to_periodic_list             0x020060bd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_add_whitelist                        0x020060d5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_aes_encrypt                          0x020060e9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clear_white_lists                    0x0200612d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clr_adv_set                          0x0200613d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_clr_periodic_adv_list                0x0200614d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_create_connection_cancel             0x0200615d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_default_periodic_adv_sync_transfer_param 0x0200616d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_disconnect                           0x02006185   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_disconnect_all                       0x020061b1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_ext_create_connection                0x020061f1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_get_connection_parameter_range       0x020062e1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_le_read_channel_map                  0x0200631d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_create_sync             0x02006391   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_create_sync_cancel      0x020063b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_set_info_transfer       0x020063c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_sync_transfer           0x020063dd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_sync_transfer_param     0x020063f5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_periodic_adv_term_sync               0x02006411   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_antenna_info                    0x020064a5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_periodic_adv_list_size          0x020064b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_phy                             0x020064c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_remote_used_features            0x020064d9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_remote_version                  0x020064ed   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_read_rssi                            0x02006501   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_remove_whitelist                     0x02006515   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rmv_adv_set                          0x02006599   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rmv_dev_from_periodic_list           0x020065ad   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rx_test_v2                           0x020065c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_rx_test_v3                           0x020065dd   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_adv_set_random_addr              0x0200662d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_request_enable    0x02006679   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_response_enable   0x02006695   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_rx_param          0x020066a9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_cte_tx_param          0x02006705   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connection_parameter_range       0x02006759   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_cte_tx_enable     0x02006771   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_cte_tx_param      0x02006785   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_connectionless_iq_sampling_enable 0x020067e5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_data_length                      0x02006849   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_def_phy                          0x02006865   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_data                     0x0200687d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_enable                   0x02006895   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_adv_para                     0x02006911   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_enable                  0x020069e9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_para                    0x02006a01   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_ext_scan_response_data           0x02006aa9   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_host_channel_classification      0x02006ac1   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_data                0x02006ad5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_enable              0x02006b49   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_para                0x02006b5d   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_periodic_adv_rx_enable           0x02006b75   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_phy                              0x02006b89   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_set_random_device_address            0x02006ba5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_start_ccm                            0x02006bd5   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_test_end                             0x02006c09   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_tx_test_v2                           0x02006c19   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_tx_test_v4                           0x02006c31   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_update_connection_parameters         0x02006c59   Thumb Code     0  symdefs.m ABSOLUTE
+    gap_vendor_tx_continuous_wave            0x02006c9d   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_cancel_write                 0x020071c5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristic_descriptors 0x020071eb   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_handle_range_by_uuid128 0x0200722b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_handle_range_by_uuid16 0x0200727b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_characteristics_for_service 0x020072cb   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services    0x02007301   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services_by_uuid128 0x02007333   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_discover_primary_services_by_uuid16 0x02007377   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_execute_write                0x020073b5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_find_included_services_for_service 0x020073db   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_get_mtu                      0x02007409   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_is_ready                     0x020074cd   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_listen_for_characteristic_value_updates 0x020074e3   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_prepare_write                0x02007505   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_characteristic_descriptor_using_descriptor_handle 0x02007541   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_characteristic_descriptor_using_descriptor_handle 0x0200756b   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_characteristic_descriptor_using_descriptor_handle_with_offset 0x02007571   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_value_of_characteristic_using_value_handle 0x0200759f   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_long_value_of_characteristic_using_value_handle_with_offset 0x020075a5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_multiple_characteristic_values 0x020075d3   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristic_using_value_handle 0x02007603   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristics_by_uuid128 0x02007631   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_read_value_of_characteristics_by_uuid16 0x0200767d   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_register_handler             0x020076c9   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_reliable_write_long_value_of_characteristic 0x020076d5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_signed_write_without_response 0x02007b09   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_characteristic_descriptor_using_descriptor_handle 0x02007bcd   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_client_characteristic_configuration 0x02007c07   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_characteristic_descriptor_using_descriptor_handle 0x02007c59   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_characteristic_descriptor_using_descriptor_handle_with_offset 0x02007c69   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_value_of_characteristic 0x02007ca5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_long_value_of_characteristic_with_offset 0x02007cb5   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_value_of_characteristic 0x02007cf1   Thumb Code     0  symdefs.m ABSOLUTE
+    gatt_client_write_value_of_characteristic_without_response 0x02007d27   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_add_event_handler                    0x0200931d   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_power_control                        0x02009b1d   Thumb Code     0  symdefs.m ABSOLUTE
+    hci_register_acl_packet_handler          0x02009cd1   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_commit                                0x0200a201   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_get                                   0x0200a259   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_init                                  0x0200a271   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_put                                   0x0200a2d9   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_remove                                0x0200a351   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_remove_all                            0x0200a38d   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_value_modified                        0x0200a3d1   Thumb Code     0  symdefs.m ABSOLUTE
+    kv_visit                                 0x0200a3d5   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_add_event_handler                  0x0200a489   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_can_send_packet_now                0x0200a499   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_create_le_credit_based_connection_request 0x0200a65d   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_credit_based_send                  0x0200a7a5   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_credit_based_send_continue         0x0200a7d1   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_disconnect                         0x0200a84d   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_get_le_credit_based_connection_credits 0x0200aa39   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_get_peer_mtu_for_local_cid         0x0200aa55   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_init                               0x0200ae95   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_le_send_flow_control_credit        0x0200af8b   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_max_le_mtu                         0x0200b299   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_register_packet_handler            0x0200b3c1   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_register_service                   0x0200b3cd   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_request_can_send_now_event         0x0200b4dd   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_request_connection_parameter_update 0x0200b4f7   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_send_echo_request                  0x0200b9d9   Thumb Code     0  symdefs.m ABSOLUTE
+    l2cap_unregister_service                 0x0200bab9   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_add                         0x0200bb11   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_find                        0x0200bbe5   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_from_key                    0x0200bc11   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_cur                    0x0200bc19   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_cur_key                0x0200bc1d   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_init                   0x0200bc21   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_iter_next                   0x0200bc29   Thumb Code     0  symdefs.m ABSOLUTE
+    le_device_db_remove_key                  0x0200bc4f   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_adjust_conn_peer_tx_power             0x0200bc7d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_free                                  0x0200bca9   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_hint_on_ce_len                        0x0200bcb5   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_legacy_adv_set_interval               0x0200bced   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_malloc                                0x0200bcfd   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_scan_set_fixed_channel                0x0200be6d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_adv_access_address                0x0200bf81   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_adv_coded_scheme                  0x0200bf8d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_coded_scheme                 0x0200bfc5   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_latency                      0x0200bff1   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_conn_tx_power                     0x0200c021   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_def_antenna                       0x0200c05d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_initiating_coded_scheme           0x0200c07d   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_max_conn_number                   0x0200c089   Thumb Code     0  symdefs.m ABSOLUTE
+    ll_set_tx_power_range                    0x0200c125   Thumb Code     0  symdefs.m ABSOLUTE
+    nibble_for_char                          0x0201e881   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_32k_rc_auto_tune                0x0201e92d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_32k_rc_tune                     0x0201e979   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_calibrate_32k                   0x0201e995   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_config                          0x0201e999   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_current_task                0x0201ea81   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_gen_os_driver               0x0201eaa5   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_heap_status                 0x0201eaad   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_task_handle                 0x0201eac5   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_us_time                     0x0201eae5   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_get_version                     0x0201eae9   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_hrng                            0x0201eaf1   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_install_isr_stack               0x0201eaf9   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_install_task_stack              0x0201eb05   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_patch_rf_init_data              0x0201eb3d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_printf                          0x0201eb49   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_raise_assertion                 0x0201eb5d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_rand                            0x0201eb71   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_read_info                       0x0201eb75   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_read_persistent_reg             0x0201eba5   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_reset                           0x0201ebb1   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_evt_callback                0x0201ebc5   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_irq_callback                0x0201ebd9   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_clk_source               0x0201ec11   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_init_data                0x0201ec1d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_rf_power_mapping            0x0201ec29   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_set_timer                       0x0201ec35   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_shutdown                        0x0201ec39   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_switch_app                      0x0201ec3d   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_trace_raw                       0x0201ec55   Thumb Code     0  symdefs.m ABSOLUTE
+    platform_write_persistent_reg            0x0201ec6d   Thumb Code     0  symdefs.m ABSOLUTE
+    printf_hexdump                           0x0201ee25   Thumb Code     0  symdefs.m ABSOLUTE
+    pvPortMalloc                             0x0201f919   Thumb Code     0  symdefs.m ABSOLUTE
+    pvTaskIncrementMutexHeldCount            0x0201fa01   Thumb Code     0  symdefs.m ABSOLUTE
+    pvTimerGetTimerID                        0x0201fa19   Thumb Code     0  symdefs.m ABSOLUTE
+    pxPortInitialiseStack                    0x0201fa45   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_128                              0x0201fc2d   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_24                               0x0201fc33   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_48                               0x0201fc39   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_56                               0x0201fc3f   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_64                               0x0201fc45   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_bd_addr                          0x0201fc4b   Thumb Code     0  symdefs.m ABSOLUTE
+    reverse_bytes                            0x0201fc51   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_add_event_handler                     0x0201ff6d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_address_resolution_lookup             0x020200c5   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authenticated                         0x02020425   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_decline                 0x02020433   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_grant                   0x02020453   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_authorization_state                   0x02020473   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_bonding_decline                       0x0202048d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_config                                0x020208a5   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_config_conn                           0x020208bd   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_encryption_key_size                   0x02020a73   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_just_works_confirm                    0x02020fad   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_le_device_key                         0x020212e9   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_passkey_input                         0x0202137f   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_get 0x0202172d   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_get_mode 0x02021735   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_set_mode 0x02021741   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_private_random_address_generation_set_update_period 0x02021769   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_register_oob_data_callback            0x020218a5   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_request_pairing                       0x020218b1   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_send_security_request                 0x020222ef   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_accepted_stk_generation_methods   0x02022315   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_authentication_requirements       0x02022321   Thumb Code     0  symdefs.m ABSOLUTE
+    sm_set_encryption_key_size_range         0x0202232d   Thumb Code     0  symdefs.m ABSOLUTE
+    sscanf_bd_addr                           0x0202268d   Thumb Code     0  symdefs.m ABSOLUTE
+    sysSetPublicDeviceAddr                   0x02022a81   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid128_to_str                           0x020231ed   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid_add_bluetooth_prefix                0x02023245   Thumb Code     0  symdefs.m ABSOLUTE
+    uuid_has_bluetooth_prefix                0x02023265   Thumb Code     0  symdefs.m ABSOLUTE
+    uxListRemove                             0x02023281   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueMessagesWaiting                   0x020232a9   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueMessagesWaitingFromISR            0x020232d1   Thumb Code     0  symdefs.m ABSOLUTE
+    uxQueueSpacesAvailable                   0x020232ed   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskGetStackHighWaterMark              0x02023319   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskPriorityGet                        0x02023339   Thumb Code     0  symdefs.m ABSOLUTE
+    uxTaskPriorityGetFromISR                 0x02023355   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInitialise                          0x020233f3   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInitialiseItem                      0x02023409   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInsert                              0x0202340f   Thumb Code     0  symdefs.m ABSOLUTE
+    vListInsertEnd                           0x0202343f   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortEndScheduler                        0x02023459   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortEnterCritical                       0x02023485   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortExitCritical                        0x020234c9   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortFree                                0x020234fd   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortSuppressTicksAndSleep               0x020235a1   Thumb Code     0  symdefs.m ABSOLUTE
+    vPortValidateInterruptPriority           0x020236a9   Thumb Code     0  symdefs.m ABSOLUTE
+    vQueueDelete                             0x02023705   Thumb Code     0  symdefs.m ABSOLUTE
+    vQueueWaitForMessageRestricted           0x02023731   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskDelay                               0x02023775   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskInternalSetTimeOutState             0x020237c1   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskMissedYield                         0x020237d1   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPlaceOnEventList                    0x020237dd   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPlaceOnEventListRestricted          0x02023815   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPriorityDisinheritAfterTimeout      0x02023855   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskPrioritySet                         0x02023901   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskResume                              0x020239c9   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskStartScheduler                      0x02023a4d   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskStepTick                            0x02023add   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSuspend                             0x02023b0d   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSuspendAll                          0x02023bc9   Thumb Code     0  symdefs.m ABSOLUTE
+    vTaskSwitchContext                       0x02023bd9   Thumb Code     0  symdefs.m ABSOLUTE
+    xPortStartScheduler                      0x02023c81   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueAddToSet                           0x02023d81   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateCountingSemaphore            0x02023da5   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateCountingSemaphoreStatic      0x02023de1   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateMutex                        0x02023e25   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateMutexStatic                  0x02023e3b   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueCreateSet                          0x02023e55   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericCreate                      0x02023e5d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericCreateStatic                0x02023ea9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericReset                       0x02023f11   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericSend                        0x02023f9d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGenericSendFromISR                 0x02024109   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGiveFromISR                        0x020241c9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueGiveMutexRecursive                 0x0202426d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueIsQueueEmptyFromISR                0x020242ad   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueIsQueueFullFromISR                 0x020242d1   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueuePeek                               0x020242f9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueuePeekFromISR                        0x02024421   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueReceive                            0x0202448d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueReceiveFromISR                     0x020245b9   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueRemoveFromSet                      0x0202464d   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSelectFromSet                      0x0202466f   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSelectFromSetFromISR               0x02024681   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueSemaphoreTake                      0x02024695   Thumb Code     0  symdefs.m ABSOLUTE
+    xQueueTakeMutexRecursive                 0x02024801   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCheckForTimeOut                     0x02024845   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCreate                              0x020248b5   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskCreateStatic                        0x02024911   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetCurrentTaskHandle                0x02024981   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetSchedulerState                   0x0202498d   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetTickCount                        0x020249a9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskGetTickCountFromISR                 0x020249b5   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskIncrementTick                       0x020249c5   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskPriorityDisinherit                  0x02024a91   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskPriorityInherit                     0x02024b25   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskRemoveFromEventList                 0x02024bb9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskResumeAll                           0x02024c39   Thumb Code     0  symdefs.m ABSOLUTE
+    xTaskResumeFromISR                       0x02024d01   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreate                             0x02024d8d   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreateStatic                       0x02024dc1   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerCreateTimerTask                    0x02024df9   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGenericCommand                     0x02024e65   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGetExpiryTime                      0x02024ed5   Thumb Code     0  symdefs.m ABSOLUTE
+    xTimerGetTimerDaemonTaskHandle           0x02024ef5   Thumb Code     0  symdefs.m ABSOLUTE
+    __Vectors                                0x02028000   Data           4  startup_ing91600.o(RESET)
+    __main                                   0x02028009   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x02028009   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x0202800d   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x02028011   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x02028011   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x02028011   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x02028011   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x02028019   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x02028019   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x0202801d   Thumb Code    14  startup_ing91600.o(.text)
+    main                                     0x0202802d   Thumb Code    14  startup_ing91600.o(.text)
+    __scatterload                            0x02028045   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x02028045   Thumb Code     0  init.o(.text)
+    __aeabi_memset                           0x02028069   Thumb Code    14  memseta.o(.text)
+    __aeabi_memset4                          0x02028069   Thumb Code     0  memseta.o(.text)
+    __aeabi_memset8                          0x02028069   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr                           0x02028077   Thumb Code     4  memseta.o(.text)
+    __aeabi_memclr4                          0x02028077   Thumb Code     0  memseta.o(.text)
+    __aeabi_memclr8                          0x02028077   Thumb Code     0  memseta.o(.text)
+    _memset$wrapper                          0x0202807b   Thumb Code    18  memseta.o(.text)
+    PINCTRL_EnableAnalog                     0x0202808d   Thumb Code    82  peripheral_pinctrl.o(.text.PINCTRL_EnableAnalog)
+    PINCTRL_Pull                             0x020280e1   Thumb Code    78  peripheral_pinctrl.o(.text.PINCTRL_Pull)
+    PINCTRL_SelUSB                           0x02028131   Thumb Code    68  peripheral_pinctrl.o(.text.PINCTRL_SelUSB)
+    PINCTRL_SetPadMux                        0x02028175   Thumb Code   254  peripheral_pinctrl.o(.text.PINCTRL_SetPadMux)
+    SYSCTRL_ClearClkGate                     0x02028275   Thumb Code    10  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGate)
+    SYSCTRL_ClearClkGateMulti                0x02028281   Thumb Code    32  peripheral_sysctrl.o(.text.SYSCTRL_ClearClkGateMulti)
+    SYSCTRL_GetAdcClkDiv                     0x0202855d   Thumb Code    34  peripheral_sysctrl.o(.text.SYSCTRL_GetAdcClkDiv)
+    SYSCTRL_GetCLK32k                        0x02028581   Thumb Code    34  peripheral_sysctrl.o(.text.SYSCTRL_GetCLK32k)
+    SYSCTRL_GetClk                           0x020285a5   Thumb Code   338  peripheral_sysctrl.o(.text.SYSCTRL_GetClk)
+    SYSCTRL_GetHClk                          0x020286f9   Thumb Code    40  peripheral_sysctrl.o(.text.SYSCTRL_GetHClk)
+    SYSCTRL_GetPClk                          0x02028721   Thumb Code    22  peripheral_sysctrl.o(.text.SYSCTRL_GetPClk)
+    SYSCTRL_GetPLLClk                        0x02028739   Thumb Code    60  peripheral_sysctrl.o(.text.SYSCTRL_GetPLLClk)
+    SYSCTRL_GetSlowClk                       0x02028775   Thumb Code   116  peripheral_sysctrl.o(.text.SYSCTRL_GetSlowClk)
+    SYSCTRL_SelectUSBClk                     0x020287e9   Thumb Code    32  peripheral_sysctrl.o(.text.SYSCTRL_SelectUSBClk)
+    SYSCTRL_USBPhyConfig                     0x02028809   Thumb Code    26  peripheral_sysctrl.o(.text.SYSCTRL_USBPhyConfig)
+    TMR_WatchDogEnable3                      0x02028825   Thumb Code   288  peripheral_timer.o(.text.TMR_WatchDogEnable3)
+    TMR_WatchDogRestart                      0x02028945   Thumb Code    22  peripheral_timer.o(.text.TMR_WatchDogRestart)
+    UART_SendData                            0x0202895d   Thumb Code     4  peripheral_uart.o(.text.UART_SendData)
+    USB_CancelTransfert                      0x02028961   Thumb Code    54  peripheral_usb.o(.text.USB_CancelTransfert)
+    USB_ClrConfig                            0x02028999   Thumb Code    52  peripheral_usb.o(.text.USB_ClrConfig)
+    USB_ConfigureEp                          0x020289cd   Thumb Code    84  peripheral_usb.o(.text.USB_ConfigureEp)
+    USB_ContinueTransfer                     0x02028a21   Thumb Code   164  peripheral_usb.o(.text.USB_ContinueTransfer)
+    USB_CoreReset                            0x02028ac5   Thumb Code    40  peripheral_usb.o(.text.USB_CoreReset)
+    USB_DeviceInitialization                 0x02028aed   Thumb Code   100  peripheral_usb.o(.text.USB_DeviceInitialization)
+    USB_DisableEp                            0x02028b51   Thumb Code   270  peripheral_usb.o(.text.USB_DisableEp)
+    USB_EP0StatusIn                          0x02028c61   Thumb Code    36  peripheral_usb.o(.text.USB_EP0StatusIn)
+    USB_EP0StatusOut                         0x02028c85   Thumb Code    32  peripheral_usb.o(.text.USB_EP0StatusOut)
+    USB_EnableEp                             0x02028ca5   Thumb Code   264  peripheral_usb.o(.text.USB_EnableEp)
+    USB_FlushRXFifo                          0x02028dad   Thumb Code    52  peripheral_usb.o(.text.USB_FlushRXFifo)
+    USB_FlushTXFifo                          0x02028de1   Thumb Code    76  peripheral_usb.o(.text.USB_FlushTXFifo)
+    USB_GetEp0SetupData                      0x02028e2d   Thumb Code    10  peripheral_usb.o(.text.USB_GetEp0SetupData)
+    USB_GetMaxPacketSize                     0x02028e39   Thumb Code    22  peripheral_usb.o(.text.USB_GetMaxPacketSize)
+    USB_GetMaxTransferSize                   0x02028e51   Thumb Code    22  peripheral_usb.o(.text.USB_GetMaxTransferSize)
+    USB_GetSetupPacket                       0x02028e69   Thumb Code    36  peripheral_usb.o(.text.USB_GetSetupPacket)
+    USB_GetTransferSize                      0x02028e8d   Thumb Code   192  peripheral_usb.o(.text.USB_GetTransferSize)
+    USB_HandleEp0                            0x02028f4d   Thumb Code   276  peripheral_usb.o(.text.USB_HandleEp0)
+    USB_InitConfig                           0x02029061   Thumb Code   136  peripheral_usb.o(.text.USB_InitConfig)
+    USB_IrqHandler                           0x020290e9   Thumb Code   708  peripheral_usb.o(.text.USB_IrqHandler)
+    USB_NewTransfer                          0x020293ad   Thumb Code   196  peripheral_usb.o(.text.USB_NewTransfer)
+    USB_PCStopPhyClcok                       0x02029471   Thumb Code    48  peripheral_usb.o(.text.USB_PCStopPhyClcok)
+    USB_ReInit                               0x020294a1   Thumb Code    22  peripheral_usb.o(.text.USB_ReInit)
+    USB_RecvData                             0x020294b9   Thumb Code    68  peripheral_usb.o(.text.USB_RecvData)
+    USB_ResetTransfert                       0x020294fd   Thumb Code    60  peripheral_usb.o(.text.USB_ResetTransfert)
+    USB_SendData                             0x02029539   Thumb Code    76  peripheral_usb.o(.text.USB_SendData)
+    USB_SetEp0Stall                          0x02029585   Thumb Code    26  peripheral_usb.o(.text.USB_SetEp0Stall)
+    USB_SetStallEp                           0x020295a1   Thumb Code   114  peripheral_usb.o(.text.USB_SetStallEp)
+    USB_SetupDataFifo                        0x02029615   Thumb Code    42  peripheral_usb.o(.text.USB_SetupDataFifo)
+    USB_StartTransfer                        0x02029641   Thumb Code   136  peripheral_usb.o(.text.USB_StartTransfer)
+    apUART_BaudRateSet                       0x020296c9   Thumb Code    50  peripheral_uart.o(.text.apUART_BaudRateSet)
+    apUART_Check_TXFIFO_FULL                 0x020296fd   Thumb Code     8  peripheral_uart.o(.text.apUART_Check_TXFIFO_FULL)
+    apUART_Initialize                        0x02029705   Thumb Code   118  peripheral_uart.o(.text.apUART_Initialize)
+    app_main                                 0x0202977d   Thumb Code   104  main.o(.text.app_main)
+    bsp_usb_init                             0x02029ae9   Thumb Code   104  bsp_usb.o(.text.bsp_usb_init)
+    cb_putc                                  0x02029bbd   Thumb Code    34  main.o(.text.cb_putc)
+    config_uart                              0x02029be1   Thumb Code    60  main.o(.text.config_uart)
+    setup_peripherals                        0x02029cd1   Thumb Code    88  main.o(.text.setup_peripherals)
+    __scatterload_copy                       0x02029db7   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x02029dc5   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x02029dc7   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    ConfigDescriptor                         0x02029dd4   Data          32  bsp_usb.o(.rodata.ConfigDescriptor)
+    DeviceDescriptor                         0x02029df4   Data          18  bsp_usb.o(.rodata.DeviceDescriptor)
+    StringDescriptor_0                       0x02029e08   Data           4  bsp_usb.o(.rodata.StringDescriptor_0)
+    StringDescriptor_1                       0x02029e0c   Data          18  bsp_usb.o(.rodata.StringDescriptor_1)
+    StringDescriptor_2                       0x02029e20   Data          16  bsp_usb.o(.rodata.StringDescriptor_2)
+    StringDescriptor_3                       0x02029e30   Data          18  bsp_usb.o(.rodata.StringDescriptor_3)
+    WcidDescriptor_4                         0x02029e44   Data          40  bsp_usb.o(.rodata.WcidDescriptor_4)
+    WcidDescriptor_5                         0x02029e6c   Data         142  bsp_usb.o(.rodata.WcidDescriptor_5)
+    io_output_source_map                     0x02029efa   Data         798  peripheral_pinctrl.o(.rodata.io_output_source_map)
+    Region$$Table$$Base                      0x0202a284   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0202a294   Number         0  anon$$obj.o(Region$$Table)
+    DataRecvBuf                              0x20005528   Data          64  bsp_usb.o(.bss.DataRecvBuf)
+    DataSendBuf                              0x20005568   Data          64  bsp_usb.o(.bss.DataSendBuf)
+    DynamicDescriptor                        0x200055a8   Data          64  bsp_usb.o(.bss.DynamicDescriptor)
+    UsbVar                                   0x200055e8   Data           4  bsp_usb.o(.bss.UsbVar)
+    g_UsbVar                                 0x2000566c   Data         204  peripheral_usb.o(.bss.g_UsbVar)
+    __initial_sp                             0x2000573c   Data           0  startup_ing91600.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x02028009
+
+  Load Region LR_IROM1 (Base: 0x02028000, Size: 0x00002294, Max: 0x00058000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x02028000, Load base: 0x02028000, Size: 0x00002294, Max: 0x00058000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x02028000   0x02028000   0x00000008   Data   RO           32    RESET               startup_ing91600.o
+    0x02028008   0x02028008   0x00000000   Code   RO          480  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x02028008   0x02028008   0x00000004   Code   RO          495    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x0202800c   0x0202800c   0x00000004   Code   RO          498    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x02028010   0x02028010   0x00000000   Code   RO          500    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x02028010   0x02028010   0x00000000   Code   RO          502    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x02028010   0x02028010   0x00000008   Code   RO          503    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x02028018   0x02028018   0x00000000   Code   RO          505    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x02028018   0x02028018   0x00000000   Code   RO          507    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x02028018   0x02028018   0x00000004   Code   RO          496    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0202801c   0x0202801c   0x00000028   Code   RO           33    .text               startup_ing91600.o
+    0x02028044   0x02028044   0x00000024   Code   RO          481    .text               mc_w.l(init.o)
+    0x02028068   0x02028068   0x00000024   Code   RO          485    .text               mc_w.l(memseta.o)
+    0x0202808c   0x0202808c   0x00000052   Code   RO          326    .text.PINCTRL_EnableAnalog  peripheral_pinctrl.o
+    0x020280de   0x020280de   0x00000002   PAD
+    0x020280e0   0x020280e0   0x0000004e   Code   RO          302    .text.PINCTRL_Pull  peripheral_pinctrl.o
+    0x0202812e   0x0202812e   0x00000002   PAD
+    0x02028130   0x02028130   0x00000044   Code   RO          324    .text.PINCTRL_SelUSB  peripheral_pinctrl.o
+    0x02028174   0x02028174   0x000000fe   Code   RO          286    .text.PINCTRL_SetPadMux  peripheral_pinctrl.o
+    0x02028272   0x02028272   0x00000002   PAD
+    0x02028274   0x02028274   0x0000000a   Code   RO          166    .text.SYSCTRL_ClearClkGate  peripheral_sysctrl.o
+    0x0202827e   0x0202827e   0x00000002   PAD
+    0x02028280   0x02028280   0x00000020   Code   RO          170    .text.SYSCTRL_ClearClkGateMulti  peripheral_sysctrl.o
+    0x020282a0   0x020282a0   0x000002bc   Code   RO          164    .text.SYSCTRL_ClkGateCtrl  peripheral_sysctrl.o
+    0x0202855c   0x0202855c   0x00000022   Code   RO          244    .text.SYSCTRL_GetAdcClkDiv  peripheral_sysctrl.o
+    0x0202857e   0x0202857e   0x00000002   PAD
+    0x02028580   0x02028580   0x00000022   Code   RO          214    .text.SYSCTRL_GetCLK32k  peripheral_sysctrl.o
+    0x020285a2   0x020285a2   0x00000002   PAD
+    0x020285a4   0x020285a4   0x00000152   Code   RO          240    .text.SYSCTRL_GetClk  peripheral_sysctrl.o
+    0x020286f6   0x020286f6   0x00000002   PAD
+    0x020286f8   0x020286f8   0x00000028   Code   RO          232    .text.SYSCTRL_GetHClk  peripheral_sysctrl.o
+    0x02028720   0x02028720   0x00000016   Code   RO          238    .text.SYSCTRL_GetPClk  peripheral_sysctrl.o
+    0x02028736   0x02028736   0x00000002   PAD
+    0x02028738   0x02028738   0x0000003c   Code   RO          224    .text.SYSCTRL_GetPLLClk  peripheral_sysctrl.o
+    0x02028774   0x02028774   0x00000074   Code   RO          210    .text.SYSCTRL_GetSlowClk  peripheral_sysctrl.o
+    0x020287e8   0x020287e8   0x00000020   Code   RO          198    .text.SYSCTRL_SelectUSBClk  peripheral_sysctrl.o
+    0x02028808   0x02028808   0x0000001a   Code   RO          264    .text.SYSCTRL_USBPhyConfig  peripheral_sysctrl.o
+    0x02028822   0x02028822   0x00000002   PAD
+    0x02028824   0x02028824   0x00000120   Code   RO           86    .text.TMR_WatchDogEnable3  peripheral_timer.o
+    0x02028944   0x02028944   0x00000016   Code   RO           90    .text.TMR_WatchDogRestart  peripheral_timer.o
+    0x0202895a   0x0202895a   0x00000002   PAD
+    0x0202895c   0x0202895c   0x00000004   Code   RO          148    .text.UART_SendData  peripheral_uart.o
+    0x02028960   0x02028960   0x00000036   Code   RO          416    .text.USB_CancelTransfert  peripheral_usb.o
+    0x02028996   0x02028996   0x00000002   PAD
+    0x02028998   0x02028998   0x00000034   Code   RO          414    .text.USB_ClrConfig  peripheral_usb.o
+    0x020289cc   0x020289cc   0x00000054   Code   RO          436    .text.USB_ConfigureEp  peripheral_usb.o
+    0x02028a20   0x02028a20   0x000000a4   Code   RO          432    .text.USB_ContinueTransfer  peripheral_usb.o
+    0x02028ac4   0x02028ac4   0x00000028   Code   RO          394    .text.USB_CoreReset  peripheral_usb.o
+    0x02028aec   0x02028aec   0x00000064   Code   RO          404    .text.USB_DeviceInitialization  peripheral_usb.o
+    0x02028b50   0x02028b50   0x0000010e   Code   RO          418    .text.USB_DisableEp  peripheral_usb.o
+    0x02028c5e   0x02028c5e   0x00000002   PAD
+    0x02028c60   0x02028c60   0x00000024   Code   RO          446    .text.USB_EP0StatusIn  peripheral_usb.o
+    0x02028c84   0x02028c84   0x00000020   Code   RO          448    .text.USB_EP0StatusOut  peripheral_usb.o
+    0x02028ca4   0x02028ca4   0x00000108   Code   RO          434    .text.USB_EnableEp  peripheral_usb.o
+    0x02028dac   0x02028dac   0x00000034   Code   RO          402    .text.USB_FlushRXFifo  peripheral_usb.o
+    0x02028de0   0x02028de0   0x0000004c   Code   RO          400    .text.USB_FlushTXFifo  peripheral_usb.o
+    0x02028e2c   0x02028e2c   0x0000000a   Code   RO          450    .text.USB_GetEp0SetupData  peripheral_usb.o
+    0x02028e36   0x02028e36   0x00000002   PAD
+    0x02028e38   0x02028e38   0x00000016   Code   RO          424    .text.USB_GetMaxPacketSize  peripheral_usb.o
+    0x02028e4e   0x02028e4e   0x00000002   PAD
+    0x02028e50   0x02028e50   0x00000016   Code   RO          422    .text.USB_GetMaxTransferSize  peripheral_usb.o
+    0x02028e66   0x02028e66   0x00000002   PAD
+    0x02028e68   0x02028e68   0x00000024   Code   RO          420    .text.USB_GetSetupPacket  peripheral_usb.o
+    0x02028e8c   0x02028e8c   0x000000c0   Code   RO          426    .text.USB_GetTransferSize  peripheral_usb.o
+    0x02028f4c   0x02028f4c   0x00000114   Code   RO          454    .text.USB_HandleEp0  peripheral_usb.o
+    0x02029060   0x02029060   0x00000088   Code   RO          408    .text.USB_InitConfig  peripheral_usb.o
+    0x020290e8   0x020290e8   0x000002c4   Code   RO          456    .text.USB_IrqHandler  peripheral_usb.o
+    0x020293ac   0x020293ac   0x000000c4   Code   RO          428    .text.USB_NewTransfer  peripheral_usb.o
+    0x02029470   0x02029470   0x00000030   Code   RO          440    .text.USB_PCStopPhyClcok  peripheral_usb.o
+    0x020294a0   0x020294a0   0x00000016   Code   RO          412    .text.USB_ReInit    peripheral_usb.o
+    0x020294b6   0x020294b6   0x00000002   PAD
+    0x020294b8   0x020294b8   0x00000044   Code   RO          444    .text.USB_RecvData  peripheral_usb.o
+    0x020294fc   0x020294fc   0x0000003c   Code   RO          410    .text.USB_ResetTransfert  peripheral_usb.o
+    0x02029538   0x02029538   0x0000004c   Code   RO          442    .text.USB_SendData  peripheral_usb.o
+    0x02029584   0x02029584   0x0000001a   Code   RO          452    .text.USB_SetEp0Stall  peripheral_usb.o
+    0x0202959e   0x0202959e   0x00000002   PAD
+    0x020295a0   0x020295a0   0x00000072   Code   RO          438    .text.USB_SetStallEp  peripheral_usb.o
+    0x02029612   0x02029612   0x00000002   PAD
+    0x02029614   0x02029614   0x0000002a   Code   RO          398    .text.USB_SetupDataFifo  peripheral_usb.o
+    0x0202963e   0x0202963e   0x00000002   PAD
+    0x02029640   0x02029640   0x00000088   Code   RO          430    .text.USB_StartTransfer  peripheral_usb.o
+    0x020296c8   0x020296c8   0x00000032   Code   RO          102    .text.apUART_BaudRateSet  peripheral_uart.o
+    0x020296fa   0x020296fa   0x00000002   PAD
+    0x020296fc   0x020296fc   0x00000008   Code   RO          114    .text.apUART_Check_TXFIFO_FULL  peripheral_uart.o
+    0x02029704   0x02029704   0x00000076   Code   RO          146    .text.apUART_Initialize  peripheral_uart.o
+    0x0202977a   0x0202977a   0x00000002   PAD
+    0x0202977c   0x0202977c   0x0000006c   Code   RO           10    .text.app_main      main.o
+    0x020297e8   0x020297e8   0x00000300   Code   RO           42    .text.bsp_usb_event_handler  bsp_usb.o
+    0x02029ae8   0x02029ae8   0x00000068   Code   RO           40    .text.bsp_usb_init  bsp_usb.o
+    0x02029b50   0x02029b50   0x00000028   Code   RO           14    .text.cb_assertion  main.o
+    0x02029b78   0x02029b78   0x0000002a   Code   RO           12    .text.cb_hard_fault  main.o
+    0x02029ba2   0x02029ba2   0x00000002   PAD
+    0x02029ba4   0x02029ba4   0x00000018   Code   RO           16    .text.cb_heap_out_of_mem  main.o
+    0x02029bbc   0x02029bbc   0x00000022   Code   RO            2    .text.cb_putc       main.o
+    0x02029bde   0x02029bde   0x00000002   PAD
+    0x02029be0   0x02029be0   0x0000003c   Code   RO            6    .text.config_uart   main.o
+    0x02029c1c   0x02029c1c   0x00000014   Code   RO          228    .text.get_safe_divider  peripheral_sysctrl.o
+    0x02029c30   0x02029c30   0x00000014   Code   RO          246    .text.get_safe_divider10  peripheral_sysctrl.o
+    0x02029c44   0x02029c44   0x00000016   Code   RO          242    .text.get_safe_divider6  peripheral_sysctrl.o
+    0x02029c5a   0x02029c5a   0x00000002   PAD
+    0x02029c5c   0x02029c5c   0x00000010   Code   RO          396    .text.nop           peripheral_usb.o
+    0x02029c6c   0x02029c6c   0x0000001a   Code   RO          180    .text.set_reg_bit   peripheral_sysctrl.o
+    0x02029c86   0x02029c86   0x00000002   PAD
+    0x02029c88   0x02029c88   0x00000022   Code   RO          182    .text.set_reg_bits  peripheral_sysctrl.o
+    0x02029caa   0x02029caa   0x00000002   PAD
+    0x02029cac   0x02029cac   0x00000024   Code   RO          316    .text.set_reg_bits  peripheral_pinctrl.o
+    0x02029cd0   0x02029cd0   0x00000078   Code   RO            8    .text.setup_peripherals  main.o
+    0x02029d48   0x02029d48   0x0000005e   Code   RO          314    .text.source_id_on_pin  peripheral_pinctrl.o
+    0x02029da6   0x02029da6   0x00000002   PAD
+    0x02029da8   0x02029da8   0x0000000e   Code   RO           18    .text.watchdog_task  main.o
+    0x02029db6   0x02029db6   0x0000000e   Code   RO          522    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x02029dc4   0x02029dc4   0x00000002   Code   RO          523    i.__scatterload_null  mc_w.l(handlers.o)
+    0x02029dc6   0x02029dc6   0x0000000e   Code   RO          524    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x02029dd4   0x02029dd4   0x00000020   Data   RO           51    .rodata.ConfigDescriptor  bsp_usb.o
+    0x02029df4   0x02029df4   0x00000012   Data   RO           50    .rodata.DeviceDescriptor  bsp_usb.o
+    0x02029e06   0x02029e06   0x00000002   PAD
+    0x02029e08   0x02029e08   0x00000004   Data   RO           52    .rodata.StringDescriptor_0  bsp_usb.o
+    0x02029e0c   0x02029e0c   0x00000012   Data   RO           53    .rodata.StringDescriptor_1  bsp_usb.o
+    0x02029e1e   0x02029e1e   0x00000002   PAD
+    0x02029e20   0x02029e20   0x00000010   Data   RO           54    .rodata.StringDescriptor_2  bsp_usb.o
+    0x02029e30   0x02029e30   0x00000012   Data   RO           55    .rodata.StringDescriptor_3  bsp_usb.o
+    0x02029e42   0x02029e42   0x00000002   PAD
+    0x02029e44   0x02029e44   0x00000028   Data   RO           56    .rodata.WcidDescriptor_4  bsp_usb.o
+    0x02029e6c   0x02029e6c   0x0000008e   Data   RO           57    .rodata.WcidDescriptor_5  bsp_usb.o
+    0x02029efa   0x02029efa   0x0000031e   Data   RO          330    .rodata.io_output_source_map  peripheral_pinctrl.o
+    0x0202a218   0x0202a218   0x0000006c   Data   RO           22    .rodata.str1.1      main.o
+    0x0202a284   0x0202a284   0x00000010   Data   RO          521    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20005528, Load base: 0x0202a294, Size: 0x00000214, Max: 0x00002ad8, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20005528        -       0x00000040   Zero   RW           60    .bss.DataRecvBuf    bsp_usb.o
+    0x20005568        -       0x00000040   Zero   RW           61    .bss.DataSendBuf    bsp_usb.o
+    0x200055a8        -       0x00000040   Zero   RW           58    .bss.DynamicDescriptor  bsp_usb.o
+    0x200055e8        -       0x00000004   Zero   RW           59    .bss.UsbVar         bsp_usb.o
+    0x200055ec        -       0x00000040   Zero   RW          472    .bss.g_UsbBufferEp0In  peripheral_usb.o
+    0x2000562c        -       0x00000040   Zero   RW          471    .bss.g_UsbBufferEp0Out  peripheral_usb.o
+    0x2000566c        -       0x000000cc   Zero   RW          470    .bss.g_UsbVar       peripheral_usb.o
+    0x20005738        -       0x00000004   Zero   RW           30    STACK               startup_ing91600.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       872        112        288          0        196       8513   bsp_usb.o
+       442         72        108          0          0       6132   main.o
+       612          0        798          0          0      16087   peripheral_pinctrl.o
+      1566         88          0          0          0      18554   peripheral_sysctrl.o
+       310          0          0          0          0       4703   peripheral_timer.o
+       180          0          0          0          0       6470   peripheral_uart.o
+      3430          6          0          0        332      16410   peripheral_usb.o
+        40         12          8          0          4        424   startup_ing91600.o
+
+    ----------------------------------------------------------------------
+      7506        290       1224          0        532      77293   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+        54          0          6          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        36          0          0          0          0        108   memseta.o
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        176   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       122         16          0          0          0        176   mc_w.l
+
+    ----------------------------------------------------------------------
+       122         16          0          0          0        176   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      7628        306       1224          0        532      77553   Grand Totals
+      7628        306       1224          0        532      77553   ELF Image Totals
+      7628        306       1224          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 8852 (   8.64kB)
+    Total RW  Size (RW Data + ZI Data)               532 (   0.52kB)
+    Total ROM Size (Code + RO Data + RW Data)       8852 (   8.64kB)
+
+==============================================================================
+

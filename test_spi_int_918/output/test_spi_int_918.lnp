@@ -1,0 +1,15 @@
+--cpu Cortex-M3
+".\output\main.o"
+".\output\profile.o"
+".\output\startup_ing91800.o"
+"../../sdk\bundles\typical\ING9188xx\symdefs.m"
+".\output\peripheral_gpio.o"
+".\output\peripheral_pinctrl.o"
+".\output\peripheral_ssp.o"
+".\output\peripheral_sysctrl.o"
+".\output\peripheral_timer.o"
+".\output\peripheral_uart.o"
+--library_type=microlib --strict --scatter ".\output\test_spi_int_918.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listing\test_spi_int_918.map" -o .\output\test_spi_int_918.axf

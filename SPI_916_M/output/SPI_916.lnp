@@ -1,0 +1,25 @@
+--cpu=Cortex-M4 --fpu=SoftVFP
+".\output\main.o"
+".\output\profile.o"
+".\output\spi_spi1_read_write_without_dma.o"
+".\output\spi_spi1_read_write_with_dma.o"
+".\output\spi_spi1_read_only_write_only_without_dma.o"
+".\output\spi_spi1_read_only_write_only_with_dma.o"
+".\output\spi_spi0_read_write_without_dma.o"
+".\output\spi_spi1_read_write_without_dma_8bit.o"
+".\output\spi_spi1_read_write_with_dma_8bit.o"
+".\output\spi_spi1_read_only_write_only_with_dma_tft_240_320_16bit.o"
+".\output\startup_ing91800.o"
+"../../sdk\bundles\typical\ING9168xx\symdefs.m"
+".\output\peripheral_uart.o"
+".\output\peripheral_pinctrl.o"
+".\output\peripheral_sysctrl.o"
+".\output\peripheral_timer.o"
+".\output\peripheral_ssp.o"
+".\output\peripheral_gpio.o"
+".\output\peripheral_dma.o"
+".\output\trace.o"
+--library_type=microlib --strict --scatter ".\output\SPI_916.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\listing\SPI_916.map" -o .\output\SPI_916.axf

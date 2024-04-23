@@ -1,0 +1,12 @@
+#define HANDLE_DEVICE_NAME                                   3
+#define HANDLE_APPEARANCE                                    5
+#define HANDLE_GENERIC_INPUT                                 8
+#define HANDLE_GENERIC_OUTPUT                                10
+#define HANDLE_GENERIC_OUTPUT_CLIENT_CHAR_CONFIG             11
+
+#define HANDLE_DEVICE_NAME_OFFSET                            31
+#define HANDLE_APPEARANCE_OFFSET                             52
+#define HANDLE_GENERIC_INPUT_OFFSET                          125
+#define HANDLE_GENERIC_OUTPUT_OFFSET                         174
+#define HANDLE_GENERIC_OUTPUT_CLIENT_CHAR_CONFIG_OFFSET      182
+
